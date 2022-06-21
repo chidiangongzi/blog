@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>shell和正则表达式 | 是睿睿吖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="更新在第二行前添加数据说明：sed -i &#39;N;2i数据说明：&#39; .&#x2F;pdfn1.txt在第二行后添加数据说明：sed -i &#39;N;2a数据说明：&#39; .&#x2F;pdfn1.txt 批量删除某一进程1kill -9 &#96;ps -ef | grep interp.exe | awk &#39;&amp;#123;print $2&amp;#125;&#39;&#96; 删除制表符号后的所有内容:&#39;&lt;,&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shell和正则表达式">
+<meta property="og:url" content="http://chidiangongzi.github.io/blog/2021/01/08/shell%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
+<meta property="og:site_name" content="是睿睿吖">
+<meta property="og:description" content="更新在第二行前添加数据说明：sed -i &#39;N;2i数据说明：&#39; .&#x2F;pdfn1.txt在第二行后添加数据说明：sed -i &#39;N;2a数据说明：&#39; .&#x2F;pdfn1.txt 批量删除某一进程1kill -9 &#96;ps -ef | grep interp.exe | awk &#39;&amp;#123;print $2&amp;#125;&#39;&#96; 删除制表符号后的所有内容:&#39;&lt;,&amp;">
+<meta property="og:locale" content="ch">
+<meta property="article:published_time" content="2021-01-08T00:23:23.000Z">
+<meta property="article:modified_time" content="2022-06-09T01:20:48.517Z">
+<meta property="article:author" content="pro^w^">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="是睿睿吖" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://chidiangongzi.github.io/blog"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">首页</a>
+        
+          <a class="main-nav-link" href="/blog/archives">归档</a>
+        
+          <a class="main-nav-link" href="/blog/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">是睿睿吖</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-shell和正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2021/01/08/shell%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-date">
+  <time datetime="2021-01-08T00:23:23.000Z" itemprop="datePublished">2021-01-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      shell和正则表达式
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>在第二行前添加<code>数据说明：</code><br><code>sed -i &#39;N;2i数据说明：&#39; ./pdfn1.txt</code><br>在第二行后添加<code>数据说明：</code><br><code>sed -i &#39;N;2a数据说明：&#39; ./pdfn1.txt</code></p>
+<h4 id="批量删除某一进程"><a href="#批量删除某一进程" class="headerlink" title="批量删除某一进程"></a>批量删除某一进程</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill -9 `ps -ef | grep interp.exe | awk '&#123;print $2&#125;'`</span><br></pre></td></tr></table></figure>
+<h4 id="删除制表符号后的所有内容"><a href="#删除制表符号后的所有内容" class="headerlink" title="删除制表符号后的所有内容"></a>删除制表符号后的所有内容</h4><p><code>:&#39;&lt;,&#39;&gt;s/\^I.*//g&#39;</code></p>
+<h4 id="图像pdf批量转换为png"><a href="#图像pdf批量转换为png" class="headerlink" title="图像pdf批量转换为png"></a>图像pdf批量转换为png</h4><p>ls -1 *.pdf | xargs -n 1 bash -c ‘convert -resize 1800x -density 150 -quality 100 “$0” “${0%.pdf}.png”‘</p>
+<h4 id="图像批量逆时针旋转90度"><a href="#图像批量逆时针旋转90度" class="headerlink" title="图像批量逆时针旋转90度"></a>图像批量逆时针旋转90度</h4><p>find . -name “*.png” | xargs -n 1 bash -c ‘convert -rotate 270 “$0” “$0”‘</p>
+<h3 id="查看内存小程序-或free-m-单位M-free-g-（单位G）"><a href="#查看内存小程序-或free-m-单位M-free-g-（单位G）" class="headerlink" title="查看内存小程序 或free -m (单位M) free -g （单位G）"></a>查看内存小程序 或<code>free -m (单位M)</code> <code>free -g （单位G）</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line">print_mem()&#123;</span><br><span class="line">	 memfree&#x3D;$(($(grep -m1 &#39;MemAvailable:&#39; &#x2F;proc&#x2F;meminfo | awk &#39;&#123;print $2&#125;&#39;) &#x2F; 1024))</span><br><span class="line">	 echo -e &quot;$memfree&quot;</span><br><span class="line">&#125;</span><br><span class="line">	 echo -e &quot;💿 $(print_mem)M&quot;</span><br></pre></td></tr></table></figure>
+<hr>
+<p><code>sed -i</code>和<code>sed -e</code>的区别</p>
+<p>sed -i ，在文件上修改，修改原文件。<br>sed -e ，不在原文件上修改，输出到终端，可借用cat命令，&gt;输出到某个文件中，达到和sed -i 一样的效果。<br>替换、修改文件时，最先选择是sed -i。</p>
+<hr>
+<p>查找并修改所有ncl脚本中的某串字符<br>sed -i s/“w_00(k,j,i)=-999”/“w_00(k,j,i)=0.01”/g <code>grep &quot;w_00(k,j,i)=-999&quot; -rl --include=&quot;*.ncl&quot; ./</code></p>
+<hr>
+<p>从字符串中提取数字<br><code>echo &quot;2020年9月04日&quot; | tr -cd &quot;[0-9]&quot;</code>得到<code>2020904</code><br>bash 的if 语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if (()); then</span><br><span class="line">    echo yes</span><br><span class="line">else</span><br><span class="line">    echo no</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<p>bash 的for循环<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (( i &#x3D; 0; i &lt; 5; i++)); do</span><br><span class="line">    echo $i;</span><br><span class="line">done</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.cnblogs.com/the-capricornus/p/5009976.html" target="_blank" rel="noopener">参考链接</a></p>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chidiangongzi.github.io/blog/2021/01/08/shell%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" data-id="cl4nswno3000x4kczdhcuf0ci" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/linux/" rel="tag">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/blog/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2021/01/22/ncl/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          ncl学习小节
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2020/12/29/paper-words/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">paper-words</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#更新"><span class="toc-number">1.</span> <span class="toc-text">更新</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#批量删除某一进程"><span class="toc-number">1.1.</span> <span class="toc-text">批量删除某一进程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除制表符号后的所有内容"><span class="toc-number">1.2.</span> <span class="toc-text">删除制表符号后的所有内容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#图像pdf批量转换为png"><span class="toc-number">1.3.</span> <span class="toc-text">图像pdf批量转换为png</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#图像批量逆时针旋转90度"><span class="toc-number">1.4.</span> <span class="toc-text">图像批量逆时针旋转90度</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看内存小程序-或free-m-单位M-free-g-（单位G）"><span class="toc-number">2.</span> <span class="toc-text">查看内存小程序 或free -m (单位M) free -g （单位G）</span></a></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2022 pro^w^&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;2602005529@qq.com
+    </div>
+  </div>
+</footer>
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">首页</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/blog/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842688ce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ 
+<script src="/blog/js/is.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+<script src="/blog/js/elevator.js"></script>
+
+  </div>
+</body>
+</html>

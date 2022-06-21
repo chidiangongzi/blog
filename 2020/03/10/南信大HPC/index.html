@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>南信大HPC | 是睿睿吖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="PBS提交作业学校大型机队列及限制    队列类型 Walltime(小时) 总进程限制 用户可用进程数 在线运行作业数 节点内存(G)     Serial 无限制 112 112 112 512   Regular 12 1176 784 5 128   Economy 24 3136 1176 5 128   Longtime 无限制 672 672 2 128     示例脚本123456">
+<meta property="og:type" content="article">
+<meta property="og:title" content="南信大HPC">
+<meta property="og:url" content="http://chidiangongzi.github.io/blog/2020/03/10/%E5%8D%97%E4%BF%A1%E5%A4%A7HPC/index.html">
+<meta property="og:site_name" content="是睿睿吖">
+<meta property="og:description" content="PBS提交作业学校大型机队列及限制    队列类型 Walltime(小时) 总进程限制 用户可用进程数 在线运行作业数 节点内存(G)     Serial 无限制 112 112 112 512   Regular 12 1176 784 5 128   Economy 24 3136 1176 5 128   Longtime 无限制 672 672 2 128     示例脚本123456">
+<meta property="og:locale" content="ch">
+<meta property="article:published_time" content="2020-03-09T20:05:02.000Z">
+<meta property="article:modified_time" content="2022-04-16T02:39:52.817Z">
+<meta property="article:author" content="pro^w^">
+<meta property="article:tag" content="shell">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="是睿睿吖" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://chidiangongzi.github.io/blog"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">首页</a>
+        
+          <a class="main-nav-link" href="/blog/archives">归档</a>
+        
+          <a class="main-nav-link" href="/blog/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">是睿睿吖</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-南信大HPC" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/03/10/%E5%8D%97%E4%BF%A1%E5%A4%A7HPC/" class="article-date">
+  <time datetime="2020-03-09T20:05:02.000Z" itemprop="datePublished">2020-03-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      南信大HPC
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h1 id="PBS提交作业"><a href="#PBS提交作业" class="headerlink" title="PBS提交作业"></a>PBS提交作业</h1><h2 id="学校大型机队列及限制"><a href="#学校大型机队列及限制" class="headerlink" title="学校大型机队列及限制"></a>学校大型机队列及限制</h2><hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">队列类型</th>
+<th style="text-align:center">Walltime(小时)</th>
+<th style="text-align:center">总进程限制</th>
+<th style="text-align:center">用户可用进程数</th>
+<th style="text-align:center">在线运行作业数</th>
+<th style="text-align:center">节点内存(G)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Serial</td>
+<td style="text-align:center"><strong>无限制</strong></td>
+<td style="text-align:center">112</td>
+<td style="text-align:center">112</td>
+<td style="text-align:center"><strong>112</strong></td>
+<td style="text-align:center">512</td>
+</tr>
+<tr>
+<td style="text-align:center">Regular</td>
+<td style="text-align:center"><strong>12</strong></td>
+<td style="text-align:center">1176</td>
+<td style="text-align:center">784</td>
+<td style="text-align:center"><strong>5</strong></td>
+<td style="text-align:center">128</td>
+</tr>
+<tr>
+<td style="text-align:center">Economy</td>
+<td style="text-align:center"><strong>24</strong></td>
+<td style="text-align:center">3136</td>
+<td style="text-align:center">1176</td>
+<td style="text-align:center"><strong>5</strong></td>
+<td style="text-align:center">128</td>
+</tr>
+<tr>
+<td style="text-align:center">Longtime</td>
+<td style="text-align:center"><strong>无限制</strong></td>
+<td style="text-align:center">672</td>
+<td style="text-align:center">672</td>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center">128</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="示例脚本"><a href="#示例脚本" class="headerlink" title="示例脚本"></a>示例脚本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash  </span></span><br><span class="line"><span class="comment">#PBS -N mkr_ys  </span></span><br><span class="line"><span class="comment">#PBS -S /bin/bash  </span></span><br><span class="line"><span class="comment">#PBS -P P001801003  </span></span><br><span class="line"><span class="comment">#PBS -q Regular  </span></span><br><span class="line"><span class="comment">#PBS -l nodes=3:ppn=28  </span></span><br><span class="line"><span class="comment">#PBS -l walltime=12:00:00  </span></span><br><span class="line"><span class="comment">#PBS -e jobname.err  </span></span><br><span class="line"><span class="built_in">cd</span> <span class="variable">$PBS_O_WORKDIR</span>  </span><br><span class="line">nprocs=`cat <span class="variable">$PBS_NODEFILE</span> | wc -l`  </span><br><span class="line">mpirun -np <span class="variable">$nprocs</span> ./wrf.exe</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">脚本各行参数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">#PBS -N mkr_ys</td>
+<td style="text-align:center"><em>用于提交作业名称</em></td>
+</tr>
+<tr>
+<td style="text-align:center">#PBS -S /bin/bash</td>
+<td style="text-align:center"><em>提交脚本的语法</em></td>
+</tr>
+<tr>
+<td style="text-align:center">#PBS -P P001801003</td>
+<td style="text-align:center"><em>老师的项目号</em></td>
+</tr>
+<tr>
+<td style="text-align:center">#PBS -q Regular</td>
+<td style="text-align:center"><em>目标队列</em></td>
+</tr>
+<tr>
+<td style="text-align:center">#PBS -l nodes=3:ppn=28</td>
+<td style="text-align:center"><em>申请资源列表3个节点，28个MPI任务/节点</em></td>
+</tr>
+<tr>
+<td style="text-align:center">#PBS -l walltime=12:00:00</td>
+<td style="text-align:center"><em>估计最大运算时间，超时会自动中断作业</em></td>
+</tr>
+<tr>
+<td style="text-align:center">#PBS -e jobname.err</td>
+<td style="text-align:center"><em>报错文件</em></td>
+</tr>
+<tr>
+<td style="text-align:center">cd $PBS_O_WORKDIR</td>
+<td style="text-align:center"><em>进入脚本所在目录</em></td>
+</tr>
+<tr>
+<td style="text-align:center">nprocs=`cat $PBS_NODEFILE</td>
+<td style="text-align:center">wc -l`</td>
+</tr>
+<tr>
+<td style="text-align:center">mpirun -np $nprocs ./wrf.exe</td>
+</tr>
+</tbody>
+</table>
+<p>查询学校大型及队列使用节点的命令<br><code>qmgr -c &quot;p s&quot; | less</code></p>
+<hr>
+<p>邮箱：<a href="mailto:wufeng@ongineer.cn">wufeng@ongineer.cn</a></p>
+<p><a href="http://www.hpccube.com" target="_blank" rel="noopener">www.hpccube.com</a></p>
+<p>节点构成 (计算速度：180万亿次)<br>168 Regualr，3 Fat，5 登陆节点</p>
+<p><code>456 月份使用人数多</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chidiangongzi.github.io/blog/2020/03/10/%E5%8D%97%E4%BF%A1%E5%A4%A7HPC/" data-id="cl4nswnp5001e4kcz6pydbwz2" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/shell/" rel="tag">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/blog/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2020/03/14/ecmwf-%E6%95%B0%E6%8D%AE-wrf/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          ecmwf_数据下载
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2020/01/01/PASSWD/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">PASSWD</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#PBS提交作业"><span class="toc-number">1.</span> <span class="toc-text">PBS提交作业</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#学校大型机队列及限制"><span class="toc-number">1.1.</span> <span class="toc-text">学校大型机队列及限制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例脚本"><span class="toc-number">1.2.</span> <span class="toc-text">示例脚本</span></a></li></ol></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2022 pro^w^&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;2602005529@qq.com
+    </div>
+  </div>
+</footer>
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">首页</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/blog/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842688ce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ 
+<script src="/blog/js/is.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+<script src="/blog/js/elevator.js"></script>
+
+  </div>
+</body>
+</html>

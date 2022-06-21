@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>VIM | 是睿睿吖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="更新删除行尾空格命令1：%s&#x2F;\s\+$&#x2F;&#x2F;g.可以删除行尾多余的空格和tab符号。 命令2：%s&#x2F; *$&#x2F;&#x2F;g. &#x2F;和*中间有空格，只能删除行尾空格，对于tab不能删除 删除某行前n个字符:%s&#x2F;^.{n}&#x2F;&#x2F; 把某几行所有空格全部删除。:’&lt;,’&gt;s&#x2F;\s+&#x2F;&#x2F;g  VIM 查找关键词文件ctrl h">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VIM">
+<meta property="og:url" content="http://chidiangongzi.github.io/blog/2020/11/29/VIM/index.html">
+<meta property="og:site_name" content="是睿睿吖">
+<meta property="og:description" content="更新删除行尾空格命令1：%s&#x2F;\s\+$&#x2F;&#x2F;g.可以删除行尾多余的空格和tab符号。 命令2：%s&#x2F; *$&#x2F;&#x2F;g. &#x2F;和*中间有空格，只能删除行尾空格，对于tab不能删除 删除某行前n个字符:%s&#x2F;^.{n}&#x2F;&#x2F; 把某几行所有空格全部删除。:’&lt;,’&gt;s&#x2F;\s+&#x2F;&#x2F;g  VIM 查找关键词文件ctrl h">
+<meta property="og:locale" content="ch">
+<meta property="og:image" content="http://chidiangongzi.github.io/blog///2020/11/29/VIM/VIM-Find-md.png">
+<meta property="article:published_time" content="2020-11-29T10:48:26.000Z">
+<meta property="article:modified_time" content="2022-04-19T14:07:07.620Z">
+<meta property="article:author" content="pro^w^">
+<meta property="article:tag" content="vim">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://chidiangongzi.github.io/blog///2020/11/29/VIM/VIM-Find-md.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="是睿睿吖" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://chidiangongzi.github.io/blog"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">首页</a>
+        
+          <a class="main-nav-link" href="/blog/archives">归档</a>
+        
+          <a class="main-nav-link" href="/blog/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">是睿睿吖</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-VIM" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/11/29/VIM/" class="article-date">
+  <time datetime="2020-11-29T10:48:26.000Z" itemprop="datePublished">2020-11-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      VIM
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><h3 id="删除行尾空格"><a href="#删除行尾空格" class="headerlink" title="删除行尾空格"></a>删除行尾空格</h3><p>命令1：<code>%s/\s\+$//g.</code>可以删除行尾多余的空格和tab符号。</p>
+<p>命令2：<code>%s/ *$//g.</code> /和*中间有空格，只能删除行尾空格，对于tab不能删除</p>
+<h3 id="删除某行前n个字符"><a href="#删除某行前n个字符" class="headerlink" title="删除某行前n个字符"></a>删除某行前n个字符</h3><p>:%s/^.{n}//</p>
+<h3 id="把某几行所有空格全部删除。"><a href="#把某几行所有空格全部删除。" class="headerlink" title="把某几行所有空格全部删除。"></a>把某几行所有空格全部删除。</h3><p>:’&lt;,’&gt;s/\s+//g</p>
+<hr>
+<p>VIM 查找关键词文件ctrl h</p>
+<hr>
+<img src="/blog///2020/11/29/VIM/VIM-Find-md.png" class>
+<a id="more"></a>
+<h3 id="vim基础操作"><a href="#vim基础操作" class="headerlink" title="vim基础操作"></a>vim基础操作</h3><hr>
+<p>commond模式按’`‘可以将大写改成小写<br>制表符插入模式下ctrl v +Tab可获得制表符号<code></code></p>
+<h3 id="vim添加未识别文件类型的解决方法"><a href="#vim添加未识别文件类型的解决方法" class="headerlink" title="vim添加未识别文件类型的解决方法"></a>vim添加未识别文件类型的解决方法</h3><hr>
+<h4 id="vim用户"><a href="#vim用户" class="headerlink" title="vim用户"></a>vim用户</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.vim/ftdetect</span><br><span class="line">$ vim ncl.vim</span><br></pre></td></tr></table></figure>
+<p>在ncl.vim内添加如下内容</p>
+<p><code>au BufRead,BufNewFilE *.ncl    set filetype=ncl</code></p>
+<h4 id="neovim用户"><a href="#neovim用户" class="headerlink" title="neovim用户"></a>neovim用户</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.config/nvim/ftdetect</span><br><span class="line">$ nvim ncl.vim</span><br></pre></td></tr></table></figure>
+<p>在ncl.vim内添加如下内容</p>
+<p><code>autocmd BufNewFile,BufRead *.ncl set filetype=ncl</code></p>
+<h3 id="vimwiki-用法"><a href="#vimwiki-用法" class="headerlink" title="vimwiki 用法"></a>vimwiki 用法</h3><hr>
+<p>空格+ww 进入vimwiki</p>
+<h3 id="vim宏操作"><a href="#vim宏操作" class="headerlink" title="vim宏操作"></a>vim宏操作</h3><hr>
+<ol>
+<li><p>基本使用</p>
+<p>q[a-z] 开始录制宏</p>
+<p>q  停止录制</p>
+<p>@[a-z] 使用宏</p>
+<p>@@ 调用最近使用的宏</p>
+<p>22@[a-z] 多次重放宏</p>
+</li>
+<li><p>宏的执行方式</p>
+</li>
+</ol>
+<p>串行方式：5@[a-z] 宏内包含向下一个目标行进行移动的指令，如果出现错误，宏会停止执行</p>
+<p>并行方式：:normal @[a-z] 在高亮区域的每一行上并行执行宏，某一行出现错误不影响其他行</p>
+<h3 id="vim转换为pdf"><a href="#vim转换为pdf" class="headerlink" title="vim转换为pdf"></a>vim转换为pdf</h3><hr>
+<p>在vim下操作<br>文件打印至postscript文件</p>
+<h3 id="vim-的coc-Conquer-of-Completion-模块"><a href="#vim-的coc-Conquer-of-Completion-模块" class="headerlink" title="vim 的coc (Conquer of Completion) 模块"></a>vim 的coc (Conquer of Completion) 模块</h3><hr>
+<ul>
+<li><p>Make your Vim/Neovim as smart as VSCode</p>
+</li>
+<li><p>可以用Javascript或typescript写vim插件</p>
+</li>
+<li><p>补全协议 language server protocol </p>
+</li>
+</ul>
+<p>安装依赖</p>
+<p>Install nodejs&gt;=10.12</p>
+<p><code>curl -sL install-node.now.sh/lts | bash</code>或<code>brew install node</code></p>
+<p><code>sudo npm i -g neovim yarn</code></p>
+<p>使用Vim-plug安装coc.nvim<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot; Auto Complete</span><br><span class="line">Plug &#39;neoclide&#x2F;coc.nvim&#39;, &#123;&#39;branch&#39;: &#39;release&#39;&#125;</span><br></pre></td></tr></table></figure><br>检验是否健康(仅Neovim可用)<code>:checkheath</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">health#coc#check</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">  - OK: Environment check passed</span><br><span class="line"></span><br><span class="line">  - OK: Javascript bundle found</span><br><span class="line">  - OK: Service started&lt;S-F8tn tntitneeqQ:Q!&gt;-</span><br></pre></td></tr></table></figure>
+<h3 id="安装coc扩展-给coc安装插件"><a href="#安装coc扩展-给coc安装插件" class="headerlink" title="安装coc扩展 (给coc安装插件)"></a>安装coc扩展 (给coc安装插件)</h3><p>Install extensions like <code>:CocInstall coc-json</code></p>
+<p>Uninstall extensions like <code>:CocUninstall coc-json</code></p>
+<p>查看已经安装的插件<code>:CocList extensions</code></p>
+<p>自动批量安装插件在<code>init.vim</code>或<code>.vimrc</code>中加入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let g:coc_global_extensions &#x3D; [&#39;coc-python&#39;, &#39;coc-vimlsp&#39;, &#39;coc-html&#39;, &#39;coc-json&#39;, &#39;coc-css&#39;, &#39;coc-tsserver&#39;, &#39;coc-yank&#39;, &#39;coc-lists&#39;, &#39;coc-gitignore&#39;, &#39;coc-vimlsp&#39;, &#39;coc-tailwindcss&#39;, &#39;coc-stylelint&#39;, &#39;coc-tslint&#39;, &#39;coc-lists&#39;, &#39;coc-git&#39;, &#39;coc-explorer&#39;, &#39;coc-pyright&#39;, &#39;coc-sourcekit&#39;, &#39;coc-translator&#39;, &#39;coc-flutter&#39;]</span><br></pre></td></tr></table></figure>
+<p>如何查找发现插件</p>
+<p>安装coc-marketplace <code>:CocInstall coc-marketplace</code></p>
+<p>加载coc扩展 <code>:CocList marketplace</code></p>
+<p>TextEdit might fail if hidden is not set vim未保存的文件还在缓冲区<br><code>set hidden</code><br>推荐设置成100，使vim响应更快<br><code>set updatetime=100</code></p>
+<p>使得补全信息栏少出现一些没用的<br><code>set shortmess+=c</code></p>
+<p>使按下Tab可以自动补全代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function! s:check_back_space() abort</span><br><span class="line">	let col &#x3D; col(&#39;.&#39;) - 1</span><br><span class="line">	return !col || getline(&#39;.&#39;)[col - 1]	&#x3D;~ &#39;\s&#39;</span><br><span class="line">endfunction</span><br><span class="line">inoremap &lt;silent&gt;&lt;expr&gt; &lt;Tab&gt;</span><br><span class="line">			\ pumvisible() ? &quot;\&lt;C-n&gt;&quot; :</span><br><span class="line">			\ &lt;SID&gt;check_back_space() ? &quot;\&lt;Tab&gt;&quot; :</span><br><span class="line">			\ coc#refresh()</span><br><span class="line">inoremap &lt;expr&gt; &lt;S-Tab&gt; pumvisible() ? &quot;\&lt;C-p&gt;&quot; : &quot;\&lt;S-Tab&gt;&quot;</span><br></pre></td></tr></table></figure></p>
+<p>手动调出可以补全的内容，默认ctrl+空格<code>inoremap &lt;silent&gt;&lt;expr&gt; &lt;c-space&gt; coc#refresh()</code>和个人快捷键调用输入法冲突，改为<code>inoremap &lt;silent&gt;&lt;expr&gt; &lt;c-o&gt; coc#refresh()</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chidiangongzi.github.io/blog/2020/11/29/VIM/" data-id="cl4nswnmf00034kcz5jf807jp" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/vim/" rel="tag">vim</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/blog/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2020/12/09/linux%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          linux相关操作命令
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2020/10/30/wrf-namelist%E5%AD%A6%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">wrf_namelist学习</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#更新"><span class="toc-number">1.</span> <span class="toc-text">更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除行尾空格"><span class="toc-number">2.</span> <span class="toc-text">删除行尾空格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除某行前n个字符"><span class="toc-number">3.</span> <span class="toc-text">删除某行前n个字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#把某几行所有空格全部删除。"><span class="toc-number">4.</span> <span class="toc-text">把某几行所有空格全部删除。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim基础操作"><span class="toc-number">5.</span> <span class="toc-text">vim基础操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim添加未识别文件类型的解决方法"><span class="toc-number">6.</span> <span class="toc-text">vim添加未识别文件类型的解决方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#vim用户"><span class="toc-number">6.1.</span> <span class="toc-text">vim用户</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#neovim用户"><span class="toc-number">6.2.</span> <span class="toc-text">neovim用户</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vimwiki-用法"><span class="toc-number">7.</span> <span class="toc-text">vimwiki 用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim宏操作"><span class="toc-number">8.</span> <span class="toc-text">vim宏操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim转换为pdf"><span class="toc-number">9.</span> <span class="toc-text">vim转换为pdf</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vim-的coc-Conquer-of-Completion-模块"><span class="toc-number">10.</span> <span class="toc-text">vim 的coc (Conquer of Completion) 模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装coc扩展-给coc安装插件"><span class="toc-number">11.</span> <span class="toc-text">安装coc扩展 (给coc安装插件)</span></a></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2022 pro^w^&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;2602005529@qq.com
+    </div>
+  </div>
+</footer>
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">首页</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/blog/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842688ce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ 
+<script src="/blog/js/is.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+<script src="/blog/js/elevator.js"></script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Fortran | 是睿睿吖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="输出结果为1-1012345program alptraj     do i&#x3D;1,10     write(*,*) i     end doend输出结果同样为1-10">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fortran">
+<meta property="og:url" content="http://chidiangongzi.github.io/blog/2020/09/18/fortran/index.html">
+<meta property="og:site_name" content="是睿睿吖">
+<meta property="og:description" content="输出结果为1-1012345program alptraj     do i&#x3D;1,10     write(*,*) i     end doend输出结果同样为1-10">
+<meta property="og:locale" content="ch">
+<meta property="article:published_time" content="2020-09-18T13:27:56.000Z">
+<meta property="article:modified_time" content="2022-04-19T14:54:19.973Z">
+<meta property="article:author" content="pro^w^">
+<meta property="article:tag" content="fortran">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="是睿睿吖" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://chidiangongzi.github.io/blog"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">首页</a>
+        
+          <a class="main-nav-link" href="/blog/archives">归档</a>
+        
+          <a class="main-nav-link" href="/blog/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">是睿睿吖</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-fortran" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/09/18/fortran/" class="article-date">
+  <time datetime="2020-09-18T13:27:56.000Z" itemprop="datePublished">2020-09-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Fortran
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>输出结果为1-10<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">program</span></span> alptraj</span><br><span class="line">     <span class="keyword">do</span> i=<span class="number">1</span>,<span class="number">10</span></span><br><span class="line">     <span class="built_in">write</span>(*,*) i</span><br><span class="line">     <span class="keyword">end</span> <span class="keyword">do</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure><br>输出结果同样为1-10</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">fortran读取wrfout的nc文件，并通过查看ncl源代码，计算温度、气压、以及风场去栅格</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;fortran</span><br><span class="line">ifort ncget.f -L$NETCDF&#x2F;lib -lnetcdff -lm -I$NETCDF&#x2F;include -free -o ncget.exe</span><br></pre></td></tr></table></figure>
+<p>ncget.f 脚本如下<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">program</span></span> ncget</span><br><span class="line"><span class="keyword">implicit</span> <span class="keyword">none</span></span><br><span class="line"><span class="keyword">integer</span>, <span class="keyword">parameter</span> ::TTt=<span class="number">73</span>, LLm=<span class="number">261</span>, MMm=<span class="number">279</span>, Ndas=<span class="number">29</span> <span class="comment">!定义维数</span></span><br><span class="line"><span class="keyword">integer</span> ierr,ncid,varid,len_file</span><br><span class="line"><span class="keyword">real</span> x(LLm,MMm,Ndas,TTt) <span class="comment">!变量名：x</span></span><br><span class="line"><span class="keyword">character</span>*<span class="number">299</span> file_wrfout <span class="comment">!文件名路径</span></span><br><span class="line"><span class="keyword">include</span> <span class="string">'netcdf.inc'</span></span><br><span class="line">file_wrfout=<span class="string">"/datadir1/home/mkr/fly/wrfout_d02_2009-11-09_00_00_00"</span></span><br><span class="line">len_file=<span class="built_in">len_trim</span>(file_wrfout)</span><br><span class="line"><span class="built_in">write</span>(*,*) len_file</span><br><span class="line">ierr=nf_open(<span class="built_in">trim</span>(file_wrfout),nf_nowrite,ncid) <span class="comment">!打开netcdf文件，获取文件的ID号(ncid) &gt; Nonconforming tab character at (1)</span></span><br><span class="line"><span class="built_in">write</span>(*,*) ncid</span><br><span class="line">ierr=nf_inq_varid (ncid, <span class="string">'QVAPOR'</span>, varid) <span class="comment">!打开指定变量名'QVAPOR'，获取该变量的ID号</span></span><br><span class="line"><span class="built_in">write</span>(*,*) varid</span><br><span class="line">ierr=nf_get_var_real (ncid,varid,x) <span class="comment">!读取该变量的内容，这里已知h的维数和变量类型</span></span><br><span class="line"><span class="built_in">write</span>(*,*) x(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">71</span>) ,x(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">71</span>) ,x(<span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>)<span class="comment">!检查读取的内容</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure><br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">program</span></span> ncget</span><br><span class="line">	<span class="keyword">implicit</span> <span class="keyword">none</span></span><br><span class="line">	<span class="keyword">integer</span>, <span class="keyword">parameter</span> ::TTt=<span class="number">73</span>, LLm=<span class="number">261</span>, MMm=<span class="number">279</span>, Ndas=<span class="number">29</span> <span class="comment">!定义维数</span></span><br><span class="line">	<span class="keyword">integer</span> ierr,ncid,varid,len_file</span><br><span class="line">	<span class="keyword">integer</span> i,j,n,m</span><br><span class="line">	<span class="keyword">character</span>*<span class="number">299</span> file_wrfout <span class="comment">!文件名路径</span></span><br><span class="line">	<span class="keyword">include</span> <span class="string">'netcdf.inc'</span></span><br><span class="line"><span class="comment">!----</span></span><br><span class="line">	<span class="keyword">real</span>, <span class="keyword">allocatable</span> :: T(:,:,:,:)</span><br><span class="line"><span class="comment">! 变量：perturbation pressure and BASE STATE PRESSURE and PRESSURE(hPa)</span></span><br><span class="line">	<span class="keyword">real</span>, <span class="keyword">allocatable</span> :: P(:,:,:,:),PB(:,:,:,:),Pressure(:,:,:,:)</span><br><span class="line">	<span class="keyword">real</span>, <span class="keyword">allocatable</span> :: U(:,:,:,:),V(:,:,:,:)</span><br><span class="line">	<span class="keyword">real</span>, <span class="keyword">allocatable</span> :: W(:,:,:,:)</span><br><span class="line">	<span class="keyword">real</span>, <span class="keyword">allocatable</span> :: Ua(:,:,:,:),Va(:,:,:,:)</span><br><span class="line">	<span class="keyword">real</span>, <span class="keyword">allocatable</span> :: Wa(:,:,:,:)</span><br><span class="line">	<span class="keyword">real</span>, <span class="keyword">allocatable</span> :: QCLOUD(:,:,:,:),QRAIN(:,:,:,:),QVAPOR(:,:,:,:)</span><br><span class="line">	<span class="keyword">real</span>, <span class="keyword">allocatable</span> :: XLAT(:,:,:),XLON(:,:,:)</span><br><span class="line">	<span class="keyword">real</span>, <span class="keyword">allocatable</span> :: LAT(:,:),LON(:,:)</span><br><span class="line">	<span class="keyword">real</span>, <span class="keyword">allocatable</span> :: NLAT(:,:,:),NLON(:,:,:)</span><br><span class="line">	<span class="built_in">allocate</span>(T(LLm,MMm,Ndas,TTt))</span><br><span class="line">	<span class="built_in">allocate</span>(P(LLm,MMm,Ndas,TTt))</span><br><span class="line">	<span class="built_in">allocate</span>(PB(LLm,MMm,Ndas,TTt))</span><br><span class="line">	<span class="built_in">allocate</span>(Pressure(LLm,MMm,Ndas,TTt))</span><br><span class="line">	<span class="built_in">allocate</span>(U(LLm+<span class="number">1</span>,MMm,Ndas,TTt))</span><br><span class="line">	<span class="built_in">allocate</span>(V(LLm,MMm+<span class="number">1</span>,Ndas,TTt))</span><br><span class="line">	<span class="built_in">allocate</span>(W(LLm,MMm,Ndas+<span class="number">1</span>,TTt))</span><br><span class="line">	<span class="built_in">allocate</span>(Ua(LLm,MMm,Ndas,TTt))</span><br><span class="line">	<span class="built_in">allocate</span>(Va(LLm,MMm,Ndas,TTt))</span><br><span class="line">	<span class="built_in">allocate</span>(Wa(LLm,MMm,Ndas+<span class="number">1</span>,TTt))</span><br><span class="line">	<span class="built_in">allocate</span>(QCLOUD(LLm,MMm,Ndas,TTt))</span><br><span class="line">	<span class="built_in">allocate</span>(QRAIN(LLm,MMm,Ndas,TTt))</span><br><span class="line">	<span class="built_in">allocate</span>(QVAPOR(LLm,MMm,Ndas,TTt))</span><br><span class="line">	<span class="built_in">allocate</span>(XLAT(LLm,MMm,TTt))</span><br><span class="line">	<span class="built_in">allocate</span>(XLON(LLm,MMm,TTt))</span><br><span class="line">	<span class="built_in">allocate</span>(LAT(LLm,MMm))</span><br><span class="line">	<span class="built_in">allocate</span>(LON(LLm,MMm))</span><br><span class="line">	<span class="built_in">allocate</span>(NLAT(LLm,MMm,Ndas))</span><br><span class="line">	<span class="built_in">allocate</span>(NLON(LLm,MMm,Ndas))</span><br><span class="line"><span class="comment">!-----------------------------------------------------------</span></span><br><span class="line">	file_wrfout=<span class="string">"/datadir1/home/mkr/fly/wrfout_d02_2009-11-09_00_00_00"</span></span><br><span class="line">	len_file=<span class="built_in">len_trim</span>(file_wrfout)</span><br><span class="line">	<span class="built_in">write</span>(*,*) <span class="string">'length_of_files='</span>,len_file</span><br><span class="line">	ierr=nf_open(<span class="built_in">trim</span>(file_wrfout),nf_nowrite,ncid) <span class="comment">!打开netcdf文件，获取文件的ID号(ncid)</span></span><br><span class="line">	<span class="built_in">write</span>(*,*) <span class="string">'文件ID号：'</span>,ncid</span><br><span class="line"><span class="comment">!-----------------------------------------------------------</span></span><br><span class="line"><span class="comment">! 获取温度和气压</span></span><br><span class="line">	ierr=nf_inq_varid (ncid, <span class="string">'T'</span>, varid)</span><br><span class="line">	ierr=nf_get_var_real (ncid,varid,T)</span><br><span class="line">	ierr=nf_inq_varid (ncid, <span class="string">'P'</span>, varid)</span><br><span class="line">	ierr=nf_get_var_real (ncid,varid,P)</span><br><span class="line">	ierr=nf_inq_varid (ncid, <span class="string">'PB'</span>, varid)</span><br><span class="line">	ierr=nf_get_var_real (ncid,varid,PB)</span><br><span class="line"><span class="comment">!-----------------------------------------------------------</span></span><br><span class="line"><span class="comment">! 获取气压[hPa]</span></span><br><span class="line">	Pressure=<span class="number">0.01</span>*(P+PB)</span><br><span class="line">	<span class="built_in">write</span>(*,*) <span class="string">'气压检验：'</span>, Pressure(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>) , Pressure(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>) &amp;</span><br><span class="line">        , Pressure(<span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>) ,Pressure(<span class="number">4</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>)<span class="comment">!检查读取的内容</span></span><br><span class="line"><span class="comment">!-----------------------------------------------------------</span></span><br><span class="line">	T=T+<span class="number">300.0</span></span><br><span class="line">	P=((P+PB)/<span class="number">100000.0</span>)**(<span class="number">2.0</span>/<span class="number">7.0</span>)</span><br><span class="line">	<span class="keyword">do</span> m=<span class="number">1</span>,<span class="number">261</span></span><br><span class="line">	<span class="keyword">do</span> n=<span class="number">1</span>,<span class="number">279</span></span><br><span class="line">	<span class="keyword">do</span> j=<span class="number">1</span>,<span class="number">29</span></span><br><span class="line">	<span class="keyword">do</span> i=<span class="number">1</span>,<span class="number">73</span></span><br><span class="line">	T(m,n,j,i)=T(m,n,j,i)*P(m,n,j,i)</span><br><span class="line">	<span class="keyword">enddo</span></span><br><span class="line">	<span class="keyword">enddo</span></span><br><span class="line">	<span class="keyword">enddo</span></span><br><span class="line">	<span class="keyword">enddo</span></span><br><span class="line">	<span class="built_in">write</span>(*,*) <span class="string">'温度检验：'</span>,T(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>) ,T(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>) ,T(<span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>),T(<span class="number">4</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>)<span class="comment">!检查读取的内容</span></span><br><span class="line"><span class="comment">!-----------------------------------------------------------</span></span><br><span class="line"><span class="comment">! 获取风场U、V、W，并网格去栅格</span></span><br><span class="line">	ierr=nf_inq_varid (ncid, <span class="string">'U'</span>, varid)</span><br><span class="line">	ierr=nf_get_var_real (ncid,varid,U)</span><br><span class="line">	ierr=nf_inq_varid (ncid, <span class="string">'V'</span>, varid)</span><br><span class="line">	ierr=nf_get_var_real (ncid,varid,V)</span><br><span class="line">	ierr=nf_inq_varid (ncid, <span class="string">'W'</span>, varid)</span><br><span class="line">	ierr=nf_get_var_real (ncid,varid,W)</span><br><span class="line">	Ua =<span class="number">0.5</span>*(U(<span class="number">1</span>:LLm-<span class="number">1</span>,:,:,:)+U(<span class="number">2</span>:LLm,:,:,:))</span><br><span class="line">	Va =<span class="number">0.5</span>*(V(:,<span class="number">1</span>:MMm-<span class="number">1</span>,:,:)+V(:,<span class="number">2</span>:MMm,:,:))</span><br><span class="line">	Wa =<span class="number">0.5</span>*(W(:,:,<span class="number">1</span>:Ndas-<span class="number">1</span>,:)+W(:,:,<span class="number">2</span>:Ndas,:))</span><br><span class="line">	<span class="built_in">write</span>(*,*) <span class="string">'U风速检验：'</span>,Ua(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>) ,Ua(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>) ,Ua(<span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>),Ua(<span class="number">4</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>)<span class="comment">!检查读取的内容</span></span><br><span class="line">	<span class="built_in">write</span>(*,*) <span class="string">'V风速检验：'</span>,Va(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>) ,Va(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>) ,Va(<span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>),Va(<span class="number">4</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>)<span class="comment">!检查读取的内容</span></span><br><span class="line">	<span class="built_in">write</span>(*,*) <span class="string">'W风速检验：'</span>,Wa(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>) ,Wa(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>) ,Wa(<span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>),Wa(<span class="number">4</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>)<span class="comment">!检查读取的内容</span></span><br><span class="line"><span class="comment">!-----------------------------------------------------------</span></span><br><span class="line"><span class="comment">! 获取云水、雨水、水汽</span></span><br><span class="line">	ierr=nf_inq_varid (ncid, <span class="string">'QCLOUD'</span>, varid)</span><br><span class="line">	ierr=nf_get_var_real (ncid,varid,QCLOUD)</span><br><span class="line">	ierr=nf_inq_varid (ncid, <span class="string">'QRAIN'</span>, varid)</span><br><span class="line">	ierr=nf_get_var_real (ncid,varid,QRAIN)</span><br><span class="line">	ierr=nf_inq_varid (ncid, <span class="string">'QVAPOR'</span>, varid)</span><br><span class="line">	ierr=nf_get_var_real (ncid,varid,QVAPOR)</span><br><span class="line">	<span class="built_in">write</span>(*,*) <span class="string">'云水检验：'</span>,QCLOUD(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>) ,QCLOUD(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>) &amp;</span><br><span class="line">        ,QCLOUD(<span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>),QCLOUD(<span class="number">4</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>) <span class="comment">!检查读取的内容</span></span><br><span class="line">	<span class="built_in">write</span>(*,*) <span class="string">'雨水检验：'</span>,QRAIN(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>) ,QRAIN(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>) &amp;</span><br><span class="line">        ,QRAIN(<span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>),QRAIN(<span class="number">4</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>)  <span class="comment">!检查读取的内容</span></span><br><span class="line">	<span class="built_in">write</span>(*,*) <span class="string">'水汽检验：'</span>,QVAPOR(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>) ,QVAPOR(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>) &amp;</span><br><span class="line">        ,QVAPOR(<span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>),QVAPOR(<span class="number">4</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">63</span>)<span class="comment">!检查读取的内容</span></span><br><span class="line"><span class="comment">!-----------------------------------------------------------</span></span><br><span class="line"><span class="comment">! 获取经纬度</span></span><br><span class="line">	ierr=nf_inq_varid (ncid, <span class="string">'XLAT'</span>, varid)</span><br><span class="line">	ierr=nf_get_var_real (ncid,varid,XLAT)</span><br><span class="line">	ierr=nf_inq_varid (ncid, <span class="string">'XLONG'</span>, varid)</span><br><span class="line">	ierr=nf_get_var_real (ncid,varid,XLON)</span><br><span class="line">	LAT=XLAT(:,:,<span class="number">63</span>)</span><br><span class="line">	LON=XLON(:,:,<span class="number">63</span>)</span><br><span class="line">	<span class="keyword">do</span> i=<span class="number">1</span>,Ndas</span><br><span class="line">	NLAT(:,:,i)=LAT(:,:)</span><br><span class="line">	NLON(:,:,i)=LON(:,:)</span><br><span class="line">	<span class="keyword">enddo</span></span><br><span class="line">	<span class="built_in">write</span>(*,*) <span class="string">'纬度检验：'</span>,NLAT(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>) ,NLAT(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>) &amp;</span><br><span class="line">        ,NLAT(<span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>),NLAT(<span class="number">4</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">	<span class="built_in">write</span>(*,*) <span class="string">'经度检验：'</span>,NLON(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>) ,NLON(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>) &amp;</span><br><span class="line">        ,NLON(<span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>),NLON(<span class="number">4</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line"><span class="comment">!-----------------------------------------------------------</span></span><br><span class="line">	<span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chidiangongzi.github.io/blog/2020/09/18/fortran/" data-id="cl4nswnne000h4kcz6imsb4wr" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/fortran/" rel="tag">fortran</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/blog/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2020/10/26/bug/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          日常报错
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2020/08/18/emacs/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">emacs</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2022/06/21/%E6%AF%95%E4%B8%9A%E8%84%9A%E6%9C%AC%E6%95%B4%E7%90%86/">毕业脚本整理</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2022/04/06/UCLALES-SALSA/">UCLALES-SALSA MODEL安装</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2021/03/13/wrf-interp/">wrf_interp</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2021/03/01/python/">python</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2021/03/01/wrf-physics/">wrf-physics</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+    
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2022 pro^w^&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;2602005529@qq.com
+    </div>
+  </div>
+</footer>
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">首页</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/blog/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842688ce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ 
+<script src="/blog/js/is.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+<script src="/blog/js/elevator.js"></script>
+
+  </div>
+</body>
+</html>

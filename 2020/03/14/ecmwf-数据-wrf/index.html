@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ecmwf_数据下载 | 是睿睿吖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="简要操作流程 mkdir catch_ecmwf cd catch_ecmwf 将ecmwf-api-client-python.tgz放置于catch_ecmwf中解压缩 tar -xvf ecmwf-api-client-python.tgz rm -rf ecmwf-api-client-python.tgz cd ecmwfapi 修改api.py中的KEY、URL、EMAILkey等获取">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ecmwf_数据下载">
+<meta property="og:url" content="http://chidiangongzi.github.io/blog/2020/03/14/ecmwf-%E6%95%B0%E6%8D%AE-wrf/index.html">
+<meta property="og:site_name" content="是睿睿吖">
+<meta property="og:description" content="简要操作流程 mkdir catch_ecmwf cd catch_ecmwf 将ecmwf-api-client-python.tgz放置于catch_ecmwf中解压缩 tar -xvf ecmwf-api-client-python.tgz rm -rf ecmwf-api-client-python.tgz cd ecmwfapi 修改api.py中的KEY、URL、EMAILkey等获取">
+<meta property="og:locale" content="ch">
+<meta property="og:image" content="http://chidiangongzi.github.io/blog///2020/03/14/ecmwf-%E6%95%B0%E6%8D%AE-wrf/biying_era5.png">
+<meta property="og:image" content="http://chidiangongzi.github.io/blog///2020/03/14/ecmwf-%E6%95%B0%E6%8D%AE-wrf/ungrib_need.png">
+<meta property="article:published_time" content="2020-03-14T14:17:53.000Z">
+<meta property="article:modified_time" content="2022-04-19T13:41:47.804Z">
+<meta property="article:author" content="pro^w^">
+<meta property="article:tag" content="wrf">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://chidiangongzi.github.io/blog///2020/03/14/ecmwf-%E6%95%B0%E6%8D%AE-wrf/biying_era5.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="是睿睿吖" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://chidiangongzi.github.io/blog"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">首页</a>
+        
+          <a class="main-nav-link" href="/blog/archives">归档</a>
+        
+          <a class="main-nav-link" href="/blog/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">是睿睿吖</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ecmwf-数据-wrf" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/03/14/ecmwf-%E6%95%B0%E6%8D%AE-wrf/" class="article-date">
+  <time datetime="2020-03-14T14:17:53.000Z" itemprop="datePublished">2020-03-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ecmwf_数据下载
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h3 id="简要操作流程"><a href="#简要操作流程" class="headerlink" title="简要操作流程"></a>简要操作流程</h3><hr>
+<p><code>mkdir catch_ecmwf</code></p>
+<p><code>cd catch_ecmwf</code></p>
+<p>将ecmwf-api-client-python.tgz放置于catch_ecmwf中解压缩</p>
+<p><code>tar -xvf ecmwf-api-client-python.tgz</code></p>
+<p><code>rm -rf ecmwf-api-client-python.tgz</code></p>
+<p><code>cd ecmwfapi</code></p>
+<p>修改api.py中的KEY、URL、EMAIL<br>key等获取地址 <a href="https://api.ecmwf.int/v1/key/" target="_blank" rel="noopener">https://api.ecmwf.int/v1/key/</a></p>
+<a id="more"></a>
+<hr>
+<h4 id="注意事项使用python版本必须是python2-7奇异与版本会报错"><a href="#注意事项使用python版本必须是python2-7奇异与版本会报错" class="headerlink" title="注意事项使用python版本必须是python2.7奇异与版本会报错"></a>注意事项使用python版本必须是python2.7奇异与版本会报错</h4><p><code>python2.7 example.py</code> 进行使用</p>
+<h4 id="运行完python脚本后会出现一个网址，可以考虑用wget来下载，下载后的数据记得改名字"><a href="#运行完python脚本后会出现一个网址，可以考虑用wget来下载，下载后的数据记得改名字" class="headerlink" title="运行完python脚本后会出现一个网址，可以考虑用wget来下载，下载后的数据记得改名字"></a>运行完python脚本后会出现一个网址，可以考虑用wget来下载，下载后的数据记得改名字</h4><h4 id="学院大型机器下载速度比个人pc下载速度快几百倍，原因未知。"><a href="#学院大型机器下载速度比个人pc下载速度快几百倍，原因未知。" class="headerlink" title="学院大型机器下载速度比个人pc下载速度快几百倍，原因未知。"></a>学院大型机器下载速度比个人pc下载速度快几百倍，原因未知。</h4><p>(也许是IPV6原因吧)</p>
+<hr>
+<h3 id="欧洲中心数据处理"><a href="#欧洲中心数据处理" class="headerlink" title="欧洲中心数据处理"></a>欧洲中心数据处理</h3><p>链接Vtable:                     <code>ln -sf ungrib/Variable_Tables/Vtable.ERA-interim.pl</code></p>
+<p>链接高空数据：               <code>./link_grib.csh ./ERA-Int_pl_20160630_20160630.grib</code></p>
+<p>编辑namelist.wps:             prefix = ‘3D’,</p>
+<p>运行ungrib:                    <code>./ungrib.exe</code></p>
+<hr>
+<p>链接Vtable:                   <code>ln -sf ungrib/Variable_Tables/Vtable.ERA-interim.ml</code></p>
+<p>链接地面数据：              <code>./link_grib.csh ./ERA-Int_sfc_20160630_20160630.grib</code></p>
+<p>编辑namelist.wps:           prefix = ‘SFC’,</p>
+<p>运行ungrib:                   <code>./ungrib.exe</code></p>
+<hr>
+<p>metgrib部分</p>
+<p>编辑namelist.wps里metgrid部分： fg_name = ‘3D’,’SFC’,  </p>
+<p>运行                              <code>./metgrid.exe</code></p>
+<hr>
+<p>ecmwf初始场的 num_metgrid_levels =28</p>
+<p>fnl初始场的 num_metgrid_levels=32</p>
+<hr>
+<h3 id="ERA数据下载"><a href="#ERA数据下载" class="headerlink" title="ERA数据下载"></a>ERA数据下载</h3><hr>
+<h3 id><a href="#" class="headerlink" title></a><img src="/blog///2020/03/14/ecmwf-%E6%95%B0%E6%8D%AE-wrf/biying_era5.png" class></h3><p><a href="https://cds.climate.copernicus.eu/#!/home" target="_blank" rel="noopener">https://cds.climate.copernicus.eu/#!/home</a></p>
+<h4 id="WRF在ungrib中所需要的驱动场"><a href="#WRF在ungrib中所需要的驱动场" class="headerlink" title="WRF在ungrib中所需要的驱动场"></a>WRF在ungrib中所需要的驱动场</h4><hr>
+<h3 id="-1"><a href="#-1" class="headerlink" title></a><img src="/blog///2020/03/14/ecmwf-%E6%95%B0%E6%8D%AE-wrf/ungrib_need.png" class title="https:&#x2F;&#x2F;www2.mmm.ucar.edu&#x2F;wrf&#x2F;OnLineTutorial&#x2F;Basics&#x2F;UNGRIB&#x2F;ungrib_req_fields.php"></h3><hr>
+<p>ERA5与之对应的地面和高空数据</p>
+<p><a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels?tab=form" target="_blank" rel="noopener">https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels?tab=form</a></p>
+<p><a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-pressure-levels?tab=overview" target="_blank" rel="noopener">https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-pressure-levels?tab=overview</a></p>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chidiangongzi.github.io/blog/2020/03/14/ecmwf-%E6%95%B0%E6%8D%AE-wrf/" data-id="cl4nswnms00054kczeu3h82n7" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/wrf/" rel="tag">wrf</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/blog/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2020/04/15/dwm%E7%AA%97%E5%8F%A3%E7%AE%A1%E7%90%86%E5%99%A8%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%AB%E6%8D%B7%E9%94%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          窗口管理器dwm使用过程中的一些快捷键
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2020/03/10/%E5%8D%97%E4%BF%A1%E5%A4%A7HPC/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">南信大HPC</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#简要操作流程"><span class="toc-number">1.</span> <span class="toc-text">简要操作流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#注意事项使用python版本必须是python2-7奇异与版本会报错"><span class="toc-number">1.1.</span> <span class="toc-text">注意事项使用python版本必须是python2.7奇异与版本会报错</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#运行完python脚本后会出现一个网址，可以考虑用wget来下载，下载后的数据记得改名字"><span class="toc-number">1.2.</span> <span class="toc-text">运行完python脚本后会出现一个网址，可以考虑用wget来下载，下载后的数据记得改名字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#学院大型机器下载速度比个人pc下载速度快几百倍，原因未知。"><span class="toc-number">1.3.</span> <span class="toc-text">学院大型机器下载速度比个人pc下载速度快几百倍，原因未知。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#欧洲中心数据处理"><span class="toc-number">2.</span> <span class="toc-text">欧洲中心数据处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ERA数据下载"><span class="toc-number">3.</span> <span class="toc-text">ERA数据下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#"><span class="toc-number">4.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#WRF在ungrib中所需要的驱动场"><span class="toc-number">4.1.</span> <span class="toc-text">WRF在ungrib中所需要的驱动场</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#-1"><span class="toc-number">5.</span> <span class="toc-text"></span></a></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2022 pro^w^&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;2602005529@qq.com
+    </div>
+  </div>
+</footer>
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">首页</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/blog/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842688ce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ 
+<script src="/blog/js/is.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+<script src="/blog/js/elevator.js"></script>
+
+  </div>
+</body>
+</html>

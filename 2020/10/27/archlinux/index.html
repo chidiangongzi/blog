@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>archlinux | 是睿睿吖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="更新找到所有rar结尾的压缩包，并解压缩。find . -name ‘*.rar’ -exec unrar x {}  -exec 1234 \; linux下使用代理服务器的方法安装clash，此处略 找到机场clash的ssr订阅地址，将浏览器中下载获得Blinkload.yml名称替换成config.yaml，放在指定文件夹下执行clash -d . 当所有节点都被污染后，可以根据订阅地址更">
+<meta property="og:type" content="article">
+<meta property="og:title" content="archlinux">
+<meta property="og:url" content="http://chidiangongzi.github.io/blog/2020/10/27/archlinux/index.html">
+<meta property="og:site_name" content="是睿睿吖">
+<meta property="og:description" content="更新找到所有rar结尾的压缩包，并解压缩。find . -name ‘*.rar’ -exec unrar x {}  -exec 1234 \; linux下使用代理服务器的方法安装clash，此处略 找到机场clash的ssr订阅地址，将浏览器中下载获得Blinkload.yml名称替换成config.yaml，放在指定文件夹下执行clash -d . 当所有节点都被污染后，可以根据订阅地址更">
+<meta property="og:locale" content="ch">
+<meta property="og:image" content="http://chidiangongzi.github.io/blog///2020/10/27/archlinux/nativefier.png">
+<meta property="og:image" content="http://chidiangongzi.github.io/blog///2020/10/27/archlinux/icon.png">
+<meta property="og:image" content="http://chidiangongzi.github.io/blog///2020/10/27/archlinux/build-nativefier.png">
+<meta property="article:published_time" content="2020-10-27T13:51:24.000Z">
+<meta property="article:modified_time" content="2022-06-21T04:24:28.906Z">
+<meta property="article:author" content="pro^w^">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://chidiangongzi.github.io/blog///2020/10/27/archlinux/nativefier.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="是睿睿吖" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://chidiangongzi.github.io/blog"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">首页</a>
+        
+          <a class="main-nav-link" href="/blog/archives">归档</a>
+        
+          <a class="main-nav-link" href="/blog/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">是睿睿吖</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-archlinux" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/10/27/archlinux/" class="article-date">
+  <time datetime="2020-10-27T13:51:24.000Z" itemprop="datePublished">2020-10-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      archlinux
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>找到所有rar结尾的压缩包，并解压缩。<br>find . -name ‘*.rar’ -exec unrar x {}  -exec 1234 \;</p>
+<h5 id="linux下使用代理服务器的方法"><a href="#linux下使用代理服务器的方法" class="headerlink" title="linux下使用代理服务器的方法"></a>linux下使用代理服务器的方法</h5><p>安装clash，此处略</p>
+<p>找到机场clash的ssr订阅地址，将浏览器中下载获得Blinkload.yml名称替换成config.yaml，放在指定文件夹下执行<code>clash -d .</code></p>
+<p>当所有节点都被污染后，可以根据订阅地址更新config.yaml，可以考虑自动化成shell脚本，每日使用。</p>
+<hr>
+<h5 id="使用cnpmjs镜像加速开源项目下载速度"><a href="#使用cnpmjs镜像加速开源项目下载速度" class="headerlink" title="使用cnpmjs镜像加速开源项目下载速度"></a>使用cnpmjs镜像加速开源项目下载速度</h5><p>例如<br><code>git clone https://github.com/wallena3/linux-magic-box.git</code>改写为<br><code>git clone https://github.com.cnpmjs.org/wallena3/linux-magic-box.git</code>。</p>
+<a id="more"></a>
+<h4 id="We-can’t-emphase-the-importance-of-offical-guide-too-much"><a href="#We-can’t-emphase-the-importance-of-offical-guide-too-much" class="headerlink" title="We can’t emphase  the importance of offical guide too much"></a>We can’t emphase  the importance of offical guide too much</h4><p><a href="https://wiki.archlinux.org/index.php/Installation_guide_(简体中文" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)</a>)</p>
+<p>一些不错的安装过程博客链接</p>
+<p><a href="https://www.viseator.com/2017/05/17/arch_install/" target="_blank" rel="noopener">https://www.viseator.com/2017/05/17/arch_install/</a></p>
+<p><a href="https://www.cnblogs.com/timeship/archive/2013/02/28/2937635.html" target="_blank" rel="noopener">https://www.cnblogs.com/timeship/archive/2013/02/28/2937635.html</a></p>
+<p>archlinux开机自启自己写的脚本</p>
+<p><a href="https://blog.csdn.net/sgzqc/article/details/46632881" target="_blank" rel="noopener">https://blog.csdn.net/sgzqc/article/details/46632881</a></p>
+<ul>
+<li>archlinux swap分区如何选择</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">物理内存</th>
+<th style="text-align:center">交换分区（SWAP）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">&lt;= 4G</td>
+<td style="text-align:center">至少4G</td>
+</tr>
+<tr>
+<td style="text-align:center">4~16G</td>
+<td style="text-align:center">至少8G</td>
+</tr>
+<tr>
+<td style="text-align:center">16G~64G</td>
+<td style="text-align:center">至少16G</td>
+</tr>
+<tr>
+<td style="text-align:center">64G~256G</td>
+<td style="text-align:center">至少32G</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>安装screenkey</li>
+</ul>
+<p>which zsh </p>
+<p>chsh -s /usr/bin/zsh</p>
+<p>pacman -S zsh simplescreenrecoder</p>
+<ul>
+<li>录屏软件</li>
+</ul>
+<ul>
+<li>视频剪辑</li>
+</ul>
+<p>sudo pacman -S kdenlive</p>
+<ul>
+<li>alias</li>
+</ul>
+<p>alias c = claer</p>
+<p>funcsave c </p>
+<p>alias l = “ls -la”</p>
+<p>alias sudo = “sudo -E”</p>
+<ul>
+<li>调整字体大小 nononon     in  st scripts</li>
+</ul>
+<p>vim .Xresources    写入<code>Xft.dpi: 200</code>     reboot</p>
+<p> pacman -S alacritty</p>
+<p>xmodmap 配置</p>
+<ul>
+<li>ssh 设置</li>
+</ul>
+<p>sudo pacman -S openssh </p>
+<p>ssh <a href="mailto:mkr@157.0.78.3">mkr@157.0.78.3</a></p>
+<ul>
+<li>zip 解压</li>
+</ul>
+<p>sudo pacman -S unzip</p>
+<ul>
+<li>rar 解压</li>
+</ul>
+<p>sudo pacman -S unrar</p>
+<ul>
+<li><p>.Z 压缩(ranger有相关快捷键)<br>sudo pacman -S compress</p>
+</li>
+<li><p>UI主题</p>
+</li>
+</ul>
+<p>sudo pacman -S lxappearance</p>
+<p><code>lxappearance</code></p>
+<ul>
+<li>壁纸</li>
+</ul>
+<p>sudo pacman -S feh</p>
+<p>sudo pacman -S variety</p>
+<p>壁纸选择 位于scripts/wp-change.sh </p>
+<ul>
+<li>opacity 透明度</li>
+</ul>
+<p>渲染器</p>
+<p>sudo pacman -S compton（picom)</p>
+<ul>
+<li>输入法</li>
+</ul>
+<p>sudo pacman -S fcitx fcitx-im fcitx-configtool</p>
+<p>sudo pacman -S fcitx-googlepinyin</p>
+<p>如存在终端下以及vim下无法使用输入法的情况</p>
+<p>在/etc/profile加入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=fcitx </span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=fcitx </span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=<span class="string">"@im=fcitx"</span></span><br></pre></td></tr></table></figure>
+<p><code>source /etc/profile</code>即可</p>
+<p>参考链接 <a href="https://blog.csdn.net/weixin_39465823/article/details/85158605" target="_blank" rel="noopener">https://blog.csdn.net/weixin_39465823/article/details/85158605</a></p>
+<hr>
+<p>2020年-10-08日更新archlinux后fcitx不能用，换成fcitx5</p>
+<p><code>yay -S fcitx5-chinese-addons fcitx5-git fcitx5-gtk fcitx5-qt fcitx5-pinyin-zhwiki kcm-fcitx5</code><br>在/etc/profile加入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> INPUT_METHOD=fcitx5</span><br><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=fcitx5</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=fcitx5</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=<span class="string">"@im=fcitx5"</span></span><br></pre></td></tr></table></figure>
+<p><code>source /etc/profile</code>即可</p>
+<p>dwm 的scripts/autostart_wait.sh中的fcitx换成fcitx5</p>
+<ul>
+<li>浏览器</li>
+</ul>
+<p>sudo pacman -S chromium</p>
+<ul>
+<li>pdf阅读器</li>
+</ul>
+<p>sudo pacman -S llpp</p>
+<ul>
+<li>防止误删</li>
+</ul>
+<p>sudo pacman -S trash-cli</p>
+<p><a href="https://github.com/andreafrancia/trash-cli" target="_blank" rel="noopener">https://github.com/andreafrancia/trash-cli</a></p>
+<ul>
+<li>系统监控软件</li>
+</ul>
+<p>sudo pacman -S htop</p>
+<p>sudo pacman -S bashtop</p>
+<h3 id="start"><a href="#start" class="headerlink" title="start"></a>start</h3><ul>
+<li>安装桌面环境deepin（自带lightdm)</li>
+</ul>
+<p>sudo pacman -S deepin deepin-extra</p>
+<p>sudo vi /etc/lightdm/lightdm.conf</p>
+<p>修改#greeter-session=example-gtk-gnome为</p>
+<p>greeter-session=lightdm-deepin-greeter</p>
+<ul>
+<li>一些软件配置依赖</li>
+</ul>
+<p>dwm需要配合scripts使用</p>
+<p>nvim 需要 ctag 和xclip pynvim</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S ctags         (<span class="built_in">shift</span> + Y)终端nvim内容复制到终端</span><br><span class="line">sudo pacman -S xclip						</span><br><span class="line">sudo pacman -S python-pynvim</span><br></pre></td></tr></table></figure>
+<p>nvim Ruby provider<br><code>gem install neovim</code> to ensure the neovim RubyGem is installed.</p>
+<p>nvim Node.js provider (option)<br>Run in shell: sudo npm install -g neovim</p>
+<p>Python 3 provider (optional)<br>pip install pynvim</p>
+<hr>
+<p>dwm学习资料</p>
+<p><a href="https://www.cnblogs.com/tanglizi/p/8457821.html" target="_blank" rel="noopener">https://www.cnblogs.com/tanglizi/p/8457821.html</a></p>
+<ul>
+<li>iw 连接以太网</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S iw</span><br><span class="line"></span><br><span class="line">sudo iw dev wlp4s0 connect i-NUIST</span><br><span class="line"></span><br><span class="line">sudo dhcpcd</span><br></pre></td></tr></table></figure>
+<p>打开 firefox 登陆以太网 a.nuist.edu.cn</p>
+<p> archlinux互联网相关学习链接 <a href="https://wiki.archlinux.org/index.php/Network_configuration_(简体中文" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/Network_configuration_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)</a>)</p>
+<ul>
+<li>wifi-menu链接互联网</li>
+</ul>
+<p>wifi -menu属于netctl包，wifi-menu依赖dialog，需要安装dialog</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S netctl</span><br><span class="line">sudo pacman -S dialog</span><br><span class="line">wifi-menu</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装声音驱动(ALSA-advanced linux sound architecture)</li>
+</ul>
+<p>sudo pacman -S alsa-utils</p>
+<p>参考链接<a href="https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)</a></p>
+<ul>
+<li>视网膜屏幕调整</li>
+</ul>
+<p><a href="https://wiki.archlinux.org/index.php/HiDPI_(简体中文" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/HiDPI_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)</a>)</p>
+<ul>
+<li>字体</li>
+</ul>
+<p>拷贝之前系统存储的字体</p>
+<p>拷贝之前字体配置~/.config/fontconfig</p>
+<p>修改字体权限 <code>sudo chmod -R 755 ./*</code></p>
+<p>建立字体缓存</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkfontscale</span><br><span class="line"></span><br><span class="line">mkfontdir</span><br><span class="line"></span><br><span class="line"><span class="built_in">fc</span>-cache -fv</span><br></pre></td></tr></table></figure>
+<p>reboot后生效</p>
+<p>查看安装了哪些字体<code>fc-list :lang=zh</code></p>
+<ul>
+<li>终端字体 (simple terminal)</li>
+</ul>
+<p>在st配置文件内修改，当出现终端字体过小情况，可以考虑修改配置文件，默认st的终端字体是Liberation Mono，程序员推荐字体Soure Code Pro 。</p>
+<p>Edit the following line as you prefer:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">static char *font &#x3D; &quot;Liberation Mono:pixelsize&#x3D;12:antialias&#x3D;false:autohint&#x3D;false&quot;;</span><br></pre></td></tr></table></figure>
+<p>You can also pass the value of the font in the command line:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ st -f &quot;Liberation Mono:size&#x3D;12&quot;</span><br><span class="line">$ st -f &#39;Liberation Mono-12&#39;</span><br></pre></td></tr></table></figure>
+<p>Font names can be found with <code>fc-list</code>.</p>
+<p>详细内容见 <a href="https://wiki.archlinux.org/index.php/St" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/St</a></p>
+<ul>
+<li>数据传输下载</li>
+</ul>
+<p>sudo pacman -S </p>
+<h3 id="wait-Could，But-not-necessary"><a href="#wait-Could，But-not-necessary" class="headerlink" title="wait   (Could，But not necessary)"></a>wait   (Could，But not necessary)</h3><p>sudo pacman -S chromium</p>
+<ul>
+<li></li>
+<li><p>修图</p>
+</li>
+</ul>
+<p>sudo pacman -S gimp</p>
+<ul>
+<li>邮件客户端 </li>
+</ul>
+<p>sudo pacman -S thunderbird</p>
+<ul>
+<li>office</li>
+</ul>
+<p>sudo pacman -S libreoffice</p>
+<ul>
+<li>视频播放</li>
+</ul>
+<p>sudo pacman -S vlc</p>
+<ul>
+<li>虚拟机</li>
+</ul>
+<p>sudo pacman -S virtualbox</p>
+<p>sudo pacman -S polybar</p>
+<p><a href="https://snapcraft.io/install/kdenlive/arch" target="_blank" rel="noopener">https://snapcraft.io/install/kdenlive/arch</a></p>
+<p><a href="https://snapcraft.io/search?category=featured" target="_blank" rel="noopener">https://snapcraft.io/search?category=featured</a></p>
+<p><a href="https://blog.csdn.net/superstar_zbt/article/details/100886054" target="_blank" rel="noopener">https://blog.csdn.net/superstar_zbt/article/details/100886054</a></p>
+<p><a href="https://aur.archlinux.org/packages/deepin-wine/" target="_blank" rel="noopener">https://aur.archlinux.org/packages/deepin-wine/</a></p>
+<p><a href="http://www.manongjc.com/article/27769.html" target="_blank" rel="noopener">http://www.manongjc.com/article/27769.html</a></p>
+<p><a href="https://www.jianshu.com/p/5ca64c0fb5eb" target="_blank" rel="noopener">https://www.jianshu.com/p/5ca64c0fb5eb</a></p>
+<p><a href="https://aur.archlinux.org/packages/deepin-wine-tim/" target="_blank" rel="noopener">https://aur.archlinux.org/packages/deepin-wine-tim/</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/30540589" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/30540589</a></p>
+<p><a href="https://wiki.archlinux.org/index.php/Network_configuration_(简体中文" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/Network_configuration_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)</a>)</p>
+<p><a href="https://bbs.archlinuxcn.org/viewtopic.php?id=5077" target="_blank" rel="noopener">https://bbs.archlinuxcn.org/viewtopic.php?id=5077</a></p>
+<p><a href="https://bbs.archlinux.org/viewtopic.php?id=231075" target="_blank" rel="noopener">https://bbs.archlinux.org/viewtopic.php?id=231075</a></p>
+<p><a href="https://www.veryarm.com/18809.html" target="_blank" rel="noopener">https://www.veryarm.com/18809.html</a></p>
+<p><a href="https://www.cnblogs.com/klb561/p/9038386.htm" target="_blank" rel="noopener">https://www.cnblogs.com/klb561/p/9038386.htm</a></p>
+<p><a href="https://bbs.archlinuxcn.org/viewtopic.php?pid=30974" target="_blank" rel="noopener">https://bbs.archlinuxcn.org/viewtopic.php?pid=30974</a></p>
+<hr>
+<h4 id="annconda"><a href="#annconda" class="headerlink" title="annconda"></a>annconda</h4><p>You have chosen to not have conda modify your shell scripts at all.<br>To activate conda’s base environment in your current shell session:<br>eval “$(/home/prow/anaconda3/bin/conda shell.YOUR_SHELL_NAME hook)”</p>
+<p><code>eval &quot;$(/home/prow/anaconda3/bin/conda shell.zsh hook)&quot;</code></p>
+<p>To install conda’s shell functions for easier access, first activate, then:</p>
+<p>conda init</p>
+<p>If you’d prefer that conda’s base environment not be activated on startup,<br>   set the auto_activate_base parameter to false:<br>conda config –set auto_activate_base false</p>
+<p>Thank you for installing Anaconda3!</p>
+<p><code>conda create -n ncl_to_python -c conda-forge xarray netcdf4 scipy pyngl pynio ncl</code></p>
+<p><code>conda install -c conda-forge wrf-python</code></p>
+<h3 id="nvim"><a href="#nvim" class="headerlink" title="nvim"></a>nvim</h3><hr>
+<p>sudo pacman -S python<br>sudo pacman -S yarn<br>sudo pacman -S bash-language-server</p>
+<p>在~/.config/nvim/plugged/vim-hexokinase目录下<br>需要<code>make hexokinase</code></p>
+<p><code>sudo pacman -S figlet</code> 可在normal模式下<code>tx Hello&lt;Enter&gt;</code><br>校大型机可以用brew包管理器安装。<code>brew install figlet</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> _   _      _ _       </span><br><span class="line">| | | | ___| | | ___  </span><br><span class="line">| |_| |&#x2F; _ \ | |&#x2F; _ \ </span><br><span class="line">|  _  |  __&#x2F; | | (_) |</span><br><span class="line">|_| |_|\___|_|_|\___&#x2F;</span><br></pre></td></tr></table></figure></p>
+<h3 id="dwm"><a href="#dwm" class="headerlink" title="dwm"></a>dwm</h3><p>dwm配置底层有些bar没有显示的原因<br>dwm-status-refresh.sh内有的工具没有安装导致</p>
+<p>将底层bar调整到顶层   修改config.h文件第18行<br>static const int topbar             = 1;        /<em> 0 means bottom bar </em>/</p>
+<p>sudo pacman -S acpi<br>yay -S acpitool</p>
+<p>yay -S nerd-fonts-source-code-pro<br>之前好像没安装全(unicode字体没法识别 图标标签无法显示 )<br><code>sudo pacman -S noto-fonts</code><br>Check /usr/share/fonts/noto</p>
+<hr>
+<h4 id="hexo-npm-nodejs"><a href="#hexo-npm-nodejs" class="headerlink" title="hexo npm nodejs"></a>hexo npm nodejs</h4><p><a href="https://evanmeek.github.io/2019/04/29/%E5%A6%82%E4%BD%95%E7%94%A8hexo-github-pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener">https://evanmeek.github.io/2019/04/29/%E5%A6%82%E4%BD%95%E7%94%A8hexo-github-pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</a></p>
+<h4 id="利用n管理node版本-轻松切换node"><a href="#利用n管理node版本-轻松切换node" class="headerlink" title="利用n管理node版本,轻松切换node"></a>利用n管理node版本,轻松切换node</h4><p><code>npm install -g n</code></p>
+<p><code>sudo n 13.3.0</code></p>
+<h4 id="blog-secrets"><a href="#blog-secrets" class="headerlink" title="blog secrets"></a>blog secrets</h4><p><code>npm install --save hexo-blog-encrypt</code></p>
+<h4 id="blog-fonts-setting"><a href="#blog-fonts-setting" class="headerlink" title="blog fonts setting"></a>blog fonts setting</h4><p>修改博客主题文件夹下/source/css/文件下的style.css文件</p>
+<p>修改style.css文件第124行，在font-family: 后面加上需要使用的英文字体<code>Source Code Pro</code>和中文字体<code>KaiTi</code></p>
+<p>修改内容：</p>
+<p><code>font-family: &quot;Source Code Pro&quot;, KaiTi, Arial, Roboto, &quot;Droid Sans&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Simsun&quot;, STXihei, &quot;sans-serif&quot;;</code></p>
+<p><a href="https://www.dazhuanlan.com/2020/02/02/5e367a7cdb9a5/" target="_blank" rel="noopener">参考博客链接</a> </p>
+<hr>
+<ul>
+<li>dailscripts</li>
+</ul>
+<p>sudo pacman -S expect</p>
+<ul>
+<li>hpc</li>
+<li>yd</li>
+</ul>
+<ul>
+<li>blackarchlinux 安装方式</li>
+</ul>
+<h4 id="deepin和blackarch冲突"><a href="#deepin和blackarch冲突" class="headerlink" title="deepin和blackarch冲突"></a>deepin和blackarch冲突</h4><p>deepin-udis86 and udis86 are in conflict. Remove udis86? [y/N]</p>
+<h3 id="取消deepin开机自启的lightdm-直接进入tty模式"><a href="#取消deepin开机自启的lightdm-直接进入tty模式" class="headerlink" title="取消deepin开机自启的lightdm 直接进入tty模式"></a>取消deepin开机自启的lightdm 直接进入tty模式</h3><p>systemctl disable lightdm</p>
+<h3 id="安装textlive"><a href="#安装textlive" class="headerlink" title="安装textlive"></a>安装textlive</h3><p><code>sudo pacman -S texlive-most</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:: There are 12 members in group texlive-most:</span><br><span class="line">:: Repository extra</span><br><span class="line">   1) texlive-bibtexextra  2) texlive-core  3) texlive-fontsextra  4) texlive-formatsextra  5) texlive-games  6) texlive-humanities</span><br><span class="line">   7) texlive-latexextra  8) texlive-music  9) texlive-pictures  10) texlive-pstricks  11) texlive-publishers  12) texlive-science</span><br></pre></td></tr></table></figure>
+<p><code>sudo pacman -S texlive-lang</code> </p>
+<h3 id="Archlinux开启ssh服务命令："><a href="#Archlinux开启ssh服务命令：" class="headerlink" title="Archlinux开启ssh服务命令："></a>Archlinux开启ssh服务命令：</h3><p>systemctl enable sshd.service  开机启动</p>
+<p>systemctl start sshd.service     立即启动</p>
+<p>systemctl restart sshd.service   立即重启</p>
+<h3 id="安装you-get"><a href="#安装you-get" class="headerlink" title="安装you-get"></a>安装you-get</h3><p>sudo pacman -S you-get</p>
+<h3 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h3><p>sudo pacman -S axel</p>
+<h3 id="安装musicbox"><a href="#安装musicbox" class="headerlink" title="安装musicbox"></a>安装musicbox</h3><p>存储于config配置中</p>
+<p>修改了NEMbox位置下的menu.py文件使其更适用于colemak键位</p>
+<p>更新：修改~/anaconda3/lib/python3.7/site-packages/NEMbox/config.py里适用于colemak键位</p>
+<p>python3 setup install</p>
+<h3 id="音乐播放器"><a href="#音乐播放器" class="headerlink" title="音乐播放器"></a>音乐播放器</h3><p><code>sudo pacman -S audacious</code></p>
+<p><code>audtool</code></p>
+<p><code>sudo pacman -S sox</code> </p>
+<p>mp4 转换为 mp3<br><code>ffmpeg -i -----.mp4 ----.mp3</code></p>
+<h3 id="安卓投屏"><a href="#安卓投屏" class="headerlink" title="安卓投屏"></a>安卓投屏</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S scrcpy</span><br><span class="line">sudo pacman -S adb</span><br></pre></td></tr></table></figure>
+<p>设置小米手机开发者权限</p>
+<ul>
+<li>不锁定屏幕</li>
+<li>直接进入系统 （开启后不适用系统的锁屏样式，点亮屏幕直接进入系统，需要无屏幕密码）</li>
+<li>USB调试 (连接USB后启用调试模式)</li>
+<li>USB安装 (允许通过USB安装应用)</li>
+<li>USB调试(安全设置) (允许通过USB调试修改权限或模拟点击） 这个一定要勾选，不然就没法操作了</li>
+<li>显示点按操作反馈 推荐勾选上</li>
+<li>启用MIUI优化 建议关掉，关掉后去权限设置里面配置下，安装应用就不会弹窗了</li>
+</ul>
+<hr>
+<h3 id="mp3-播放单曲循环"><a href="#mp3-播放单曲循环" class="headerlink" title="mp3 播放单曲循环"></a>mp3 播放单曲循环</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S mpg123</span><br><span class="line">mpg123 --loop -1  abc.mp3</span><br></pre></td></tr></table></figure>
+<h3 id="卸载blackarchlinux"><a href="#卸载blackarchlinux" class="headerlink" title="卸载blackarchlinux"></a>卸载blackarchlinux</h3><p><code>sudo pacman -Rsn blackarch</code><br><code>sudo nvim /etc/pacman.conf</code></p>
+<p>注销掉下面两行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#[blackarch]</span><br><span class="line">#Include &#x3D; &#x2F;etc&#x2F;pacman.d&#x2F;blackarch-mirrorlist</span><br></pre></td></tr></table></figure></p>
+<h3 id="7z文件夹解压缩"><a href="#7z文件夹解压缩" class="headerlink" title="7z文件夹解压缩"></a>7z文件夹解压缩</h3><p>sudo pacman -S p7zip<br>解压方式 7z e 待解压文件</p>
+<h3 id="安装tree"><a href="#安装tree" class="headerlink" title="安装tree"></a>安装tree</h3><p>用于树状显示文件夹<br><code>sudo pacman -S tree</code></p>
+<h3 id="安装vim打印为pdf所需软件"><a href="#安装vim打印为pdf所需软件" class="headerlink" title="安装vim打印为pdf所需软件"></a>安装vim打印为pdf所需软件</h3><p><code>sudo pacman -S paps</code><br><code>sudo pacman -S cups-pdf</code></p>
+<h3 id="安装gfortran"><a href="#安装gfortran" class="headerlink" title="安装gfortran"></a>安装gfortran</h3><p><code>sudo pacman -S gcc</code><br><code>sudo pacmans -S gcc-fortran</code> </p>
+<h3 id="ncl-filedump需要csh"><a href="#ncl-filedump需要csh" class="headerlink" title="ncl_filedump需要csh"></a>ncl_filedump需要csh</h3><p><code>sudo pacman -S tcsh</code> </p>
+<h3 id="安装ifort"><a href="#安装ifort" class="headerlink" title="安装ifort"></a>安装ifort</h3><p><code>git clone https://aur.archlinux.org/intel-parallel-studio-xe.git</code><br><code>makepkg -si</code></p>
+<h3 id="安装netcdf"><a href="#安装netcdf" class="headerlink" title="安装netcdf"></a>安装netcdf</h3><p>sudo pacman -S netcdf</p>
+<h3 id="安装dpkg，用于解压deb安装"><a href="#安装dpkg，用于解压deb安装" class="headerlink" title="安装dpkg，用于解压deb安装"></a>安装dpkg，用于解压deb安装</h3><p>sudo pacman -S dpkg</p>
+<h3 id="安装qt5"><a href="#安装qt5" class="headerlink" title="安装qt5"></a>安装qt5</h3><p>sudo pacman -S qt5</p>
+<h3 id="远程控制windows电脑"><a href="#远程控制windows电脑" class="headerlink" title="远程控制windows电脑"></a>远程控制windows电脑</h3><p>sudo pacman -S rdesktop</p>
+<p>控制方法<code>rdesktop -f 10.13.99.46</code><br>-f 表示全屏，最好不加上</p>
+<p>windows对应的设置<br><img src data-echo="./archlinux/rdesktop_windows.jpg" alt="windows_rdestop"> </p>
+<h3 id="安装IBM弹簧键盘音效"><a href="#安装IBM弹簧键盘音效" class="headerlink" title="安装IBM弹簧键盘音效"></a>安装IBM弹簧键盘音效</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S bucklespring</span><br></pre></td></tr></table></figure>
+<p>Dependencies on Arch Linux<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S openal alure libxtst</span><br><span class="line">sudo pacman -S dumb</span><br><span class="line">sudo pacman -S fluidsynth</span><br></pre></td></tr></table></figure><br>使用方法 <code>buckle &amp;</code></p>
+<p>从Github上安装</p>
+<p><code>git clone https://github.com.cnpmjs.org/zevv/bucklespring.git</code></p>
+<p>同样需要安装依赖</p>
+<p>Building and run</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">make</span><br><span class="line">.&#x2F;buckle</span><br></pre></td></tr></table></figure>
+<p>另外一个相关的Github还未看，是模拟机械键盘音的，有空可以看看<a href="https://github.com/hainguyents13/mechvibes" target="_blank" rel="noopener">mechivibes</a>。</p>
+<h3 id="B站直播"><a href="#B站直播" class="headerlink" title="B站直播"></a>B站直播</h3><p>安装OBS</p>
+<p><code>sudo pacman -S obs-studio</code> </p>
+<p>linux版本的弹幕库下载链接</p>
+<p><a href="http://bilibili.danmaku.live/#/" target="_blank" rel="noopener">下载链接</a> </p>
+<p>使用方法的博客链接</p>
+<p><a href="https://blog.csdn.net/qq_26819733/article/details/80410182" target="_blank" rel="noopener">参考博客链接</a></p>
+<h3 id="linux下OTP码"><a href="#linux下OTP码" class="headerlink" title="linux下OTP码"></a>linux下OTP码</h3><p>如果有二维码可以参考以下步骤<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> base64</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>string=<span class="string">'this is s string'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>secretKey = base64.b32encode(string.encode(encoding=<span class="string">"utf-8"</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(secretKey)</span><br><span class="line"><span class="string">b'ORUGS4ZANFZSA4ZAON2HE2LOM4======'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pyotp</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>totp = pyotp.TOTP(secretKey)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>totp.now()</span><br><span class="line"><span class="string">'863055'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>totp.verify(<span class="number">863055</span>)</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure><br> <a href="https://www.cnblogs.com/sdadx/p/8137060.html" target="_blank" rel="noopener">参考链接</a></p>
+<hr>
+<h3 id="linux下使用iCloud"><a href="#linux下使用iCloud" class="headerlink" title="linux下使用iCloud"></a>linux下使用iCloud</h3><p>安装Nativefier<br><code>npm install nativefier -g</code><br><img src="/blog///2020/10/27/archlinux/nativefier.png" class><br>用Nativefier制作Linux iCloud应用程序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;tmp</span><br><span class="line">mkdir -p icloud-linux-build-dir</span><br><span class="line">cd icloud-linux-build-dir</span><br></pre></td></tr></table></figure><br>用wget下载程序从Internet上获取iCloud图标：</p>
+<p>也可以考虑打开链接另存为<br><img src="/blog///2020/10/27/archlinux/icon.png" class><br><code>wget https://i.imgur.com/m0abT4k.png -O icon.png</code><br>使用Nativefier打包Linux二进制文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nativefier -p linux -a x64 -i icon.png --disable-context-menu --disable-dev-tools --single-instance https:&#x2F;&#x2F;www.icloud.com&#x2F;</span><br></pre></td></tr></table></figure>
+<img src="/blog///2020/10/27/archlinux/build-nativefier.png" class>
+<p><code>mv iCloud-linux-x64 icloud</code> </p>
+<h2 id="将新的icloud文件夹放入-opt："><a href="#将新的icloud文件夹放入-opt：" class="headerlink" title="将新的icloud文件夹放入/opt："></a>将新的icloud文件夹放入/opt：</h2><p>mv /tmp/icloud-linux-build-dir/icloud /opt</p>
+<p>sudo chmod 755 -R /opt/icloud/<br> <a href="https://ywnz.com/linuxjc/5106.html" target="_blank" rel="noopener">参考链接</a> </p>
+<p>###<br>systemctl enable laptop-mode.service</p>
+<p><a href="mailto:k0f3f8tl@icloud.com">k0f3f8tl@icloud.com</a><br>Xx223322</p>
+<p><a href="https://api.pay.pm/link/g1mC3oIExhBxA8Aa?mu=1" target="_blank" rel="noopener">https://api.pay.pm/link/g1mC3oIExhBxA8Aa?mu=1</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chidiangongzi.github.io/blog/2020/10/27/archlinux/" data-id="cl4nswnmy00084kcz6rhi7zic" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/linux/" rel="tag">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/blog/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2020/10/29/wrf-%E4%BF%AE%E6%94%B9%E6%B3%A8%E5%86%8C%E8%A1%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          wrf-修改注册表
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2020/10/26/bug/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">日常报错</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#更新"><span class="toc-number">1.</span> <span class="toc-text">更新</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#linux下使用代理服务器的方法"><span class="toc-number">1.0.1.</span> <span class="toc-text">linux下使用代理服务器的方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#使用cnpmjs镜像加速开源项目下载速度"><span class="toc-number">1.0.2.</span> <span class="toc-text">使用cnpmjs镜像加速开源项目下载速度</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#We-can’t-emphase-the-importance-of-offical-guide-too-much"><span class="toc-number">1.1.</span> <span class="toc-text">We can’t emphase  the importance of offical guide too much</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#start"><span class="toc-number">2.</span> <span class="toc-text">start</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wait-Could，But-not-necessary"><span class="toc-number">3.</span> <span class="toc-text">wait   (Could，But not necessary)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#annconda"><span class="toc-number">3.1.</span> <span class="toc-text">annconda</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nvim"><span class="toc-number">4.</span> <span class="toc-text">nvim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dwm"><span class="toc-number">5.</span> <span class="toc-text">dwm</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo-npm-nodejs"><span class="toc-number">5.1.</span> <span class="toc-text">hexo npm nodejs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#利用n管理node版本-轻松切换node"><span class="toc-number">5.2.</span> <span class="toc-text">利用n管理node版本,轻松切换node</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#blog-secrets"><span class="toc-number">5.3.</span> <span class="toc-text">blog secrets</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#blog-fonts-setting"><span class="toc-number">5.4.</span> <span class="toc-text">blog fonts setting</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#deepin和blackarch冲突"><span class="toc-number">5.5.</span> <span class="toc-text">deepin和blackarch冲突</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#取消deepin开机自启的lightdm-直接进入tty模式"><span class="toc-number">6.</span> <span class="toc-text">取消deepin开机自启的lightdm 直接进入tty模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装textlive"><span class="toc-number">7.</span> <span class="toc-text">安装textlive</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Archlinux开启ssh服务命令："><span class="toc-number">8.</span> <span class="toc-text">Archlinux开启ssh服务命令：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装you-get"><span class="toc-number">9.</span> <span class="toc-text">安装you-get</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多线程"><span class="toc-number">10.</span> <span class="toc-text">多线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装musicbox"><span class="toc-number">11.</span> <span class="toc-text">安装musicbox</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#音乐播放器"><span class="toc-number">12.</span> <span class="toc-text">音乐播放器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安卓投屏"><span class="toc-number">13.</span> <span class="toc-text">安卓投屏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mp3-播放单曲循环"><span class="toc-number">14.</span> <span class="toc-text">mp3 播放单曲循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#卸载blackarchlinux"><span class="toc-number">15.</span> <span class="toc-text">卸载blackarchlinux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7z文件夹解压缩"><span class="toc-number">16.</span> <span class="toc-text">7z文件夹解压缩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装tree"><span class="toc-number">17.</span> <span class="toc-text">安装tree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装vim打印为pdf所需软件"><span class="toc-number">18.</span> <span class="toc-text">安装vim打印为pdf所需软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装gfortran"><span class="toc-number">19.</span> <span class="toc-text">安装gfortran</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ncl-filedump需要csh"><span class="toc-number">20.</span> <span class="toc-text">ncl_filedump需要csh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装ifort"><span class="toc-number">21.</span> <span class="toc-text">安装ifort</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装netcdf"><span class="toc-number">22.</span> <span class="toc-text">安装netcdf</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装dpkg，用于解压deb安装"><span class="toc-number">23.</span> <span class="toc-text">安装dpkg，用于解压deb安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装qt5"><span class="toc-number">24.</span> <span class="toc-text">安装qt5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#远程控制windows电脑"><span class="toc-number">25.</span> <span class="toc-text">远程控制windows电脑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装IBM弹簧键盘音效"><span class="toc-number">26.</span> <span class="toc-text">安装IBM弹簧键盘音效</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#B站直播"><span class="toc-number">27.</span> <span class="toc-text">B站直播</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux下OTP码"><span class="toc-number">28.</span> <span class="toc-text">linux下OTP码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux下使用iCloud"><span class="toc-number">29.</span> <span class="toc-text">linux下使用iCloud</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将新的icloud文件夹放入-opt："><span class="toc-number"></span> <span class="toc-text">将新的icloud文件夹放入&#x2F;opt：</span></a>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2022 pro^w^&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;2602005529@qq.com
+    </div>
+  </div>
+</footer>
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">首页</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/blog/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842688ce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ 
+<script src="/blog/js/is.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+<script src="/blog/js/elevator.js"></script>
+
+  </div>
+</body>
+</html>

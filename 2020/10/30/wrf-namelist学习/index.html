@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>wrf_namelist学习 | 是睿睿吖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="更新ncks -d Time,2,4 wrfsfdda_d01 wrfsfdda_d01-p ncatted -O -h -a WRF_ALARM_SECS_TIL_NEXT_RING_01,global,m,i,5 wrfrst_d01_2017-06-07_06:00:00 wrfrst_d01_2017-06-07_06:00:00ncatted -O -h -a WRF_ALARM_SEC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="wrf_namelist学习">
+<meta property="og:url" content="http://chidiangongzi.github.io/blog/2020/10/30/wrf-namelist%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="是睿睿吖">
+<meta property="og:description" content="更新ncks -d Time,2,4 wrfsfdda_d01 wrfsfdda_d01-p ncatted -O -h -a WRF_ALARM_SECS_TIL_NEXT_RING_01,global,m,i,5 wrfrst_d01_2017-06-07_06:00:00 wrfrst_d01_2017-06-07_06:00:00ncatted -O -h -a WRF_ALARM_SEC">
+<meta property="og:locale" content="ch">
+<meta property="article:published_time" content="2020-10-30T11:07:41.000Z">
+<meta property="article:modified_time" content="2022-05-03T14:34:07.230Z">
+<meta property="article:author" content="pro^w^">
+<meta property="article:tag" content="wrf">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="是睿睿吖" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://chidiangongzi.github.io/blog"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">首页</a>
+        
+          <a class="main-nav-link" href="/blog/archives">归档</a>
+        
+          <a class="main-nav-link" href="/blog/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">是睿睿吖</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-wrf-namelist学习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/10/30/wrf-namelist%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time datetime="2020-10-30T11:07:41.000Z" itemprop="datePublished">2020-10-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      wrf_namelist学习
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>ncks -d Time,2,4 wrfsfdda_d01 wrfsfdda_d01-p</p>
+<p>ncatted -O -h -a WRF_ALARM_SECS_TIL_NEXT_RING_01,global,m,i,5 wrfrst_d01_2017-06-07_06:00:00 wrfrst_d01_2017-06-07_06:00:00<br>ncatted -O -h -a WRF_ALARM_SECS_TIL_NEXT_RING_01,global,m,i,5 wrfrst_d02_2017-06-07_06:00:00 wrfrst_d02_2017-06-07_06:00:00</p>
+<p>ncatted -O -h -a SIMULATION_START_DATE,global,m,c,2017-06-07_06:00:00 wrfsfdda_d01 wrfsfdda_d01</p>
+<p>ncatted -O -h -a SIMULATION_START_DATE,global,m,c,2017-06-07_06:00:00 wrfsfdda_d02 wrfsfdda_d02</p>
+<p>NCAR官网帐号密码 (用于下载GFS和FNL数据)</p>
+<p>帐号：<a href="mailto:majp@esrichina.com.cn">majp@esrichina.com.cn</a><br>密码：yp102827</p>
+<a id="more"></a>
+<h3 id="namelist设计"><a href="#namelist设计" class="headerlink" title="namelist设计"></a>namelist设计</h3><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&amp;share</span><br><span class="line"> wrf_core &#x3D; &#39;ARW&#39;,   最大嵌套数 2层</span><br><span class="line"> max_dom &#x3D; 2,</span><br><span class="line"> start_date &#x3D; &#39;2016-06-30_00:00:00&#39;,&#39;2016-06-30_00:00:00&#39;,</span><br><span class="line"> end_date   &#x3D; &#39;2016-06-30_18:00:00&#39;,&#39;2016-06-30_18:00:00&#39;,</span><br><span class="line"> interval_seconds &#x3D; 21600  前处理程序的两次分析时间之间的时间间隔，以秒为单位。也即模式的实时输入数据的时间间隔，一般为输入边界条件的文件的时间间隔。</span><br><span class="line"> io_form_geogrid &#x3D; 2,     2代表netcdf</span><br><span class="line">&#x2F;</span><br><span class="line"></span><br><span class="line">&amp;geogrid</span><br><span class="line"> parent_id         &#x3D;   1,   1,   嵌套区域母区域标号,注意MOAD本身没有母区域，因此PARent ID的第一列总是设置为1，第二列必须等于1。总列数必须等于NUM_DOMAINS</span><br><span class="line"> parent_grid_ratio &#x3D;   1,   3,嵌套时，母网格相对于嵌套网格的水平网格比例。在真实大气方案中。如果将反馈选项feedback设置为0的话，则此比例也可以为偶数，比例选择1：3时间步长也最好设置为3的倍数以保持积分稳定</span><br><span class="line"> i_parent_start    &#x3D;   1,  52,  嵌套网格的左下角在上一级网格(母网格)中x方向的起始位置</span><br><span class="line"> j_parent_start    &#x3D;   1,  70,  嵌套网格的左下角在上一级网格(母网格)中y方向的起始位置</span><br><span class="line"> e_we              &#x3D; 340, 676,   x方向(西-东方向)的终止格点值(通常为x方向的格点数) 676-1需要被3整除</span><br><span class="line"> e_sn              &#x3D; 303, 439,   y方向(南-北方向)的终止格点值(通常为y方向的格点数) 439-1需要被3整除</span><br><span class="line"> geog_data_res     &#x3D; &#39;2m&#39;,&#39;30s&#39;,   (区域对应选择的地表面静态数据)  建议看README</span><br><span class="line"> dx &#x3D; 3000,   指定x方向的格距(单位为米)。在真实大气方案中，此参数值必须与输入数据中的x方向格距一致</span><br><span class="line"> dy &#x3D; 3000,   指定y方向的格距(单位为米)。在真实大气方案中，此参数值必须与输入数据中的y方向格距一致</span><br><span class="line"> map_proj &#x3D; &#39;lambert&#39;,    (地图投影)&quot;polar&quot;-&gt;极射投影 &quot;lambert&quot;-&gt;兰伯托等角投影(正割和正切) &quot;mercator&quot;-&gt;麦卡托</span><br><span class="line"> ref_lat   &#x3D;  31.528,          中心纬度</span><br><span class="line"> ref_lon   &#x3D;  112.193,         中心经度</span><br><span class="line"> truelat1  &#x3D;  30.0,            兰伯特投影两条标准纬度线  30N 60N</span><br><span class="line"> truelat2  &#x3D;  60.0,            兰伯特投影和球面的两条割线分别为30N 60N</span><br><span class="line"> stand_lon &#x3D;  119.8,           标准经度  兰伯特投影投影区域的中心</span><br><span class="line"> geog_data_path &#x3D;&#39;&#x2F;public1&#x2F;WRF-DATA&#x2F;geog&#39;</span><br><span class="line">&#x2F;</span><br><span class="line"></span><br><span class="line">&amp;ungrib</span><br><span class="line"> out_format &#x3D; &#39;WPS&#39;,</span><br><span class="line"> prefix &#x3D; &#39;SFC&#39;,</span><br><span class="line">&#x2F;</span><br><span class="line"></span><br><span class="line">&amp;metgrid</span><br><span class="line"> fg_name &#x3D; &#39;3D&#39;,&#39;SFC&#39;,</span><br><span class="line"> io_form_metgrid &#x3D; 2, </span><br><span class="line">&#x2F;</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br></pre></td><td class="code"><pre><span class="line"> &amp;time_control</span><br><span class="line"> run_days                            &#x3D; 0,   运行时间(天)</span><br><span class="line"> run_hours                           &#x3D; 12,  (时)</span><br><span class="line"> run_minutes                         &#x3D; 0,   (分)</span><br><span class="line"> run_seconds                         &#x3D; 0,   (秒)</span><br><span class="line"> start_year                          &#x3D; 2016, 2016,  起始年份</span><br><span class="line"> start_month                         &#x3D; 06,   06,    起始月份</span><br><span class="line"> start_day                           &#x3D; 30,   30,    起始日数</span><br><span class="line"> start_hour                          &#x3D; 00,   00,    起始小时</span><br><span class="line"> start_minute                        &#x3D; 00,   00,    起始分钟</span><br><span class="line"> start_second                        &#x3D; 00,   00,    起始秒数</span><br><span class="line"> end_year                            &#x3D; 2016, 2016,</span><br><span class="line"> end_month                           &#x3D; 06,   06, 对应的结束时间</span><br><span class="line"> end_day                             &#x3D; 30,   30,  </span><br><span class="line"> end_hour                            &#x3D; 12,   12,  </span><br><span class="line"> end_minute                          &#x3D; 00,   00,  </span><br><span class="line"> end_second                          &#x3D; 00,   00,  </span><br><span class="line"> interval_seconds                    &#x3D; 21600    前处理程序的两次分析时间的时间间隔</span><br><span class="line"> input_from_file                     &#x3D; .true.,.true.,.true.,</span><br><span class="line">嵌套初始场输入选项。嵌套时，指定嵌套网格是否用不同的初始场文件</span><br><span class="line"> history_interval                    &#x3D; 180,  60,  </span><br><span class="line"> 指定模式结果输出的时间间隔，以分钟为单位</span><br><span class="line"> frames_per_outfile                  &#x3D; 1000, 1000,</span><br><span class="line"> 运行1000小时生成一个文件，防止服务器中断</span><br><span class="line"> restart                             &#x3D; .false.,</span><br><span class="line"> 是否进行重新启动</span><br><span class="line"> restart_interval                    &#x3D; 5000,</span><br><span class="line"> 重启时间间隔(分钟)</span><br><span class="line"> io_form_history                     &#x3D; 2  (2&#x3D;NetCDF)</span><br><span class="line"> io_form_restart                     &#x3D; 2  </span><br><span class="line"> 指定模式断电重启输出的格式，2为netCDF格式</span><br><span class="line"> io_form_input                       &#x3D; 2   (2&#x3D;NetCDF)</span><br><span class="line"> io_form_boundary                    &#x3D; 2</span><br><span class="line"> 指定模式边界条件数据的格式</span><br><span class="line"> 1 二进制格式</span><br><span class="line"> 2 NetCDF格式</span><br><span class="line"> 4 PHD5格式</span><br><span class="line"> 5 GRIB1格式</span><br><span class="line"> debug_level                         &#x3D; 0</span><br><span class="line"> 此选择模式运行时的调试信息输出等级。取值可为0,50,100,200,300,数值越大，调试信息输出就越多，默认值为0</span><br><span class="line"> &#x2F;</span><br><span class="line"></span><br><span class="line"> &amp;domains</span><br><span class="line"> time_step                           &#x3D; 15,   </span><br><span class="line"> 积分的时间步长，为整型数，单位为秒，在真实大气中推荐值小于dx公里数的5~6倍一般选择网格距的3倍左右</span><br><span class="line"> 积分步长越小，计算误差4。</span><br><span class="line"> time_step_fract_num                 &#x3D; 0,</span><br><span class="line"> 实数型时间步长的分子部分</span><br><span class="line"> time_step_fract_den                 &#x3D; 1,</span><br><span class="line"> 实数型时间步长的分母部分</span><br><span class="line"> max_dom                             &#x3D; 2,</span><br><span class="line"> 最大区域数</span><br><span class="line"> e_we                                &#x3D; 340,   676,</span><br><span class="line"> x方向(西-东方向)的终止格点值(通常为x方向的格点数)</span><br><span class="line"> e_sn                                &#x3D; 303,   439,</span><br><span class="line"> y方向(南-北方向)的终止格点值(通常为y方向的格点数)</span><br><span class="line"> e_vert                              &#x3D; 51,    51,</span><br><span class="line"> z方向(垂直方向)的终止格点值，即全</span><br><span class="line">垂直eta层的总层数。</span><br><span class="line"> 垂直层数在各嵌套网格中必须保持一致</span><br><span class="line"> p_top_requested                     &#x3D; 5000,</span><br><span class="line"> num_metgrid_levels                  &#x3D; 28,</span><br><span class="line"> num_metgrid_soil_levels             &#x3D; 4,</span><br><span class="line"> eta_levels &#x3D; 1.0000,0.9980,0.9940,0.9870,0.9750,0.9590,0.9390,0.9160,0.8920,0.8650,0.8350,0.8020,0.7660,0.7270,0.6850,0.6400,0.5920,0.5420,0.4970,0.4565,0.4205,0.3877,0.3582,0.3317,0.3078,0.2863,0.2670,0.2496,0.2329,0.2188,0.2047,0.1906,0.1765,0.1624,0.1483,0.1342,0.1201,0.1060,0.0919,0.0778,0.0657,0.0568,0.0486,0.0409,0.0337,0.0271,0.0209,0.0151,0.0097,0.0047,0.0000,</span><br><span class="line"> dx                                  &#x3D; 3000, 1000, </span><br><span class="line"> 指定x方向的格距(单位为米)。在真实大气方案中，此参数值必须与输入数据中的x方向格距一致</span><br><span class="line"> dy                                  &#x3D; 3000, 1000, </span><br><span class="line"> 指定y方向的格距(单位为米)。在真实大气方案中，此参数值必须与输入数据中的y方向格距一致</span><br><span class="line"> grid_id                             &#x3D; 1,     2,    </span><br><span class="line">计算区域的编号，一般是从1开始</span><br><span class="line"> parent_id                           &#x3D; 0,     1,    </span><br><span class="line"> 嵌套网格的上一级网格(母网格)的编号，一般时从0开始</span><br><span class="line"> i_parent_start                      &#x3D; 1,     52,   </span><br><span class="line"> j_parent_start                      &#x3D; 1,     70,   </span><br><span class="line"> parent_grid_ratio                   &#x3D; 1,     3,    </span><br><span class="line"> parent_time_step_ratio              &#x3D; 1,     3,    </span><br><span class="line"> feedback                            &#x3D; 1,</span><br><span class="line"> smooth_option                       &#x3D; 0</span><br><span class="line"> &#x2F;</span><br><span class="line"></span><br><span class="line"> &amp;physics</span><br><span class="line"> mp_physics                          &#x3D; 8,    8,    </span><br><span class="line"> ra_lw_physics                       &#x3D; 1,     1,    </span><br><span class="line"> ra_sw_physics                       &#x3D; 1,     1,    </span><br><span class="line"> radt                                &#x3D; 6,     2,   </span><br><span class="line"> sf_sfclay_physics                   &#x3D; 1,     1,    </span><br><span class="line"> sf_surface_physics                  &#x3D; 2,     2,    </span><br><span class="line"> bl_pbl_physics                      &#x3D; 99,    99,    </span><br><span class="line"> cu_physics                          &#x3D; 0,     0,    </span><br><span class="line"> cudt                                &#x3D; 0,     0,    </span><br><span class="line"> isfflx                              &#x3D; 1,</span><br><span class="line"> ifsnow                              &#x3D; 0,</span><br><span class="line"> icloud                              &#x3D; 1,</span><br><span class="line"> surface_input_source                &#x3D; 1,</span><br><span class="line"> num_soil_layers                     &#x3D; 4,</span><br><span class="line"> sf_urban_physics                    &#x3D; 0,     0,    </span><br><span class="line"> &#x2F;</span><br><span class="line"></span><br><span class="line"> &amp;fdda</span><br><span class="line"> &#x2F;</span><br><span class="line"></span><br><span class="line"> &amp;dynamics</span><br><span class="line"> w_damping                           &#x3D; 0,</span><br><span class="line"> diff_opt                            &#x3D; 1,        </span><br><span class="line"> km_opt                              &#x3D; 4,        </span><br><span class="line"> diff_6th_opt                        &#x3D; 0,      0,   </span><br><span class="line"> diff_6th_factor                     &#x3D; 0.12,   0.12,</span><br><span class="line"> base_temp                           &#x3D; 290.</span><br><span class="line"> damp_opt                            &#x3D; 0,</span><br><span class="line"> zdamp                               &#x3D; 5000.,  5000.,</span><br><span class="line"> dampcoef                            &#x3D; 0.2,    0.2,  </span><br><span class="line"> khdif                               &#x3D; 0,      0,    </span><br><span class="line"> kvdif                               &#x3D; 0,      0,    </span><br><span class="line"> non_hydrostatic                     &#x3D; .true., .true., </span><br><span class="line"> moist_adv_opt                       &#x3D; 1,      1,           </span><br><span class="line"> scalar_adv_opt                      &#x3D; 1,      1,           </span><br><span class="line"> &#x2F;</span><br><span class="line"></span><br><span class="line"> &amp;bdy_control</span><br><span class="line"> spec_bdy_width                      &#x3D; 5,</span><br><span class="line"> spec_zone                           &#x3D; 1,</span><br><span class="line"> relax_zone                          &#x3D; 4,</span><br><span class="line"> specified                           &#x3D; .true., .false.,</span><br><span class="line"> nested                              &#x3D; .false., .true.,</span><br><span class="line"> &#x2F;</span><br><span class="line"></span><br><span class="line"> &amp;grib2</span><br><span class="line"> &#x2F;</span><br><span class="line"></span><br><span class="line"> &amp;namelist_quilt</span><br><span class="line"> nio_tasks_per_group &#x3D; 0,</span><br><span class="line"> nio_groups &#x3D; 1,</span><br><span class="line"> &#x2F;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">kemit</span><br><span class="line">chem_opt 化学选项 选10               10， 10</span><br><span class="line">photdt光解率                        30， 30</span><br><span class="line"></span><br><span class="line">emiss_inpt_opt                     101, 101</span><br><span class="line">chem_opt和emiss_inpt_opt选项需要匹配</span><br><span class="line">tail 可以查看文件最后十行的信息</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="namelist设计-1"><a href="#namelist设计-1" class="headerlink" title="namelist设计"></a>namelist设计</h3><h5 id="namelis的物理意义，描述次网格过程。"><a href="#namelis的物理意义，描述次网格过程。" class="headerlink" title="namelis的物理意义，描述次网格过程。"></a>namelis的物理意义，描述次网格过程。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 微物理方案（热量、水汽趋势、地面降水）</span></span><br><span class="line"></span><br><span class="line">physics mp_physics = 8, 8,</span><br><span class="line"><span class="comment"># 辐射方案(长波、短波)</span></span><br><span class="line"><span class="comment"># 计算辐射通量</span></span><br><span class="line">ra_lw_physics = 1, 1,</span><br><span class="line">ra_sw_physics = 1, 1,</span><br><span class="line">radt = 6, 2,</span><br><span class="line"><span class="comment"># 地表方案(热量水汽动量源汇项)</span></span><br><span class="line">sf_sfclay_physics = 1, 1,</span><br><span class="line">sf_surface_physics = 2, 2,</span><br><span class="line"><span class="comment"># 边界层方案(扩散项)</span></span><br><span class="line"><span class="comment"># 2m温度、比湿、10m风速有近地层相似理论计算交换系数的诊断变量</span></span><br><span class="line"><span class="comment"># MYJ(2) 适用于稳定层结,</span></span><br><span class="line"><span class="comment"># YSU(1)考虑非局地诊断方案</span></span><br><span class="line">bl_pbl_physics = 99, 99,</span><br><span class="line"><span class="comment"># 积云对流方案(网格尺度大于十公里使用)</span></span><br><span class="line"><span class="comment"># 提供大气热量和水汽(云趋势扩散)，积云对流降水计算</span></span><br><span class="line">cu_physics = 0, 0,</span><br><span class="line">cudt = 0, 0,</span><br><span class="line">isfflx = 1,</span><br><span class="line">ifsnow = 0,</span><br><span class="line">icloud = 1,</span><br><span class="line">surface_input_source = 1,</span><br><span class="line">num_soil_layers = 4,</span><br><span class="line">sf_urban_physics = 0, 0,</span><br><span class="line">/</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chidiangongzi.github.io/blog/2020/10/30/wrf-namelist%E5%AD%A6%E4%B9%A0/" data-id="cl4nswnp4001c4kcz3ipm9ov4" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/wrf/" rel="tag">wrf</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/blog/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2020/11/29/VIM/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          VIM
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2020/10/29/wrf-%E4%BF%AE%E6%94%B9%E6%B3%A8%E5%86%8C%E8%A1%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">wrf-修改注册表</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#更新"><span class="toc-number">1.</span> <span class="toc-text">更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#namelist设计"><span class="toc-number">2.</span> <span class="toc-text">namelist设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#namelist设计-1"><span class="toc-number">3.</span> <span class="toc-text">namelist设计</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#namelis的物理意义，描述次网格过程。"><span class="toc-number">3.0.1.</span> <span class="toc-text">namelis的物理意义，描述次网格过程。</span></a></li></ol></li></ol></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2022 pro^w^&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;2602005529@qq.com
+    </div>
+  </div>
+</footer>
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">首页</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/blog/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842688ce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ 
+<script src="/blog/js/is.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+<script src="/blog/js/elevator.js"></script>
+
+  </div>
+</body>
+</html>

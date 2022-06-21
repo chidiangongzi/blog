@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>脚本执行化 | 是睿睿吖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="更新院服多次作业提交输送脚本，当我排上队的那个瞬间，就没有然后了。  终端下执行以下程序可以把该shell脚本添加至&#x2F;usr&#x2F;bin下，可在任何目录下调用yd可执行文件对单词进行翻译。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="脚本执行化">
+<meta property="og:url" content="http://chidiangongzi.github.io/blog/2020/05/23/scrip_run/index.html">
+<meta property="og:site_name" content="是睿睿吖">
+<meta property="og:description" content="更新院服多次作业提交输送脚本，当我排上队的那个瞬间，就没有然后了。  终端下执行以下程序可以把该shell脚本添加至&#x2F;usr&#x2F;bin下，可在任何目录下调用yd可执行文件对单词进行翻译。">
+<meta property="og:locale" content="ch">
+<meta property="og:image" content="http://chidiangongzi.github.io/blog///2020/05/23/scrip_run/yd_linux_fy.png">
+<meta property="og:image" content="http://chidiangongzi.github.io/blog///2020/05/23/scrip_run/linux_login.png">
+<meta property="og:image" content="http://chidiangongzi.github.io/blog///2020/05/23/scrip_run/linux_nuist.png">
+<meta property="article:published_time" content="2020-05-22T23:35:51.000Z">
+<meta property="article:modified_time" content="2022-04-19T14:05:12.980Z">
+<meta property="article:author" content="pro^w^">
+<meta property="article:tag" content="shell">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://chidiangongzi.github.io/blog///2020/05/23/scrip_run/yd_linux_fy.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="是睿睿吖" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://chidiangongzi.github.io/blog"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">首页</a>
+        
+          <a class="main-nav-link" href="/blog/archives">归档</a>
+        
+          <a class="main-nav-link" href="/blog/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">是睿睿吖</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-scrip_run" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/05/23/scrip_run/" class="article-date">
+  <time datetime="2020-05-22T23:35:51.000Z" itemprop="datePublished">2020-05-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      脚本执行化
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>院服多次作业提交输送脚本，当我排上队的那个瞬间，就没有然后了。</p>
+<hr>
+<h6 id="终端下执行以下程序可以把该shell脚本添加至-usr-bin下，可在任何目录下调用yd可执行文件对单词进行翻译。"><a href="#终端下执行以下程序可以把该shell脚本添加至-usr-bin下，可在任何目录下调用yd可执行文件对单词进行翻译。" class="headerlink" title="终端下执行以下程序可以把该shell脚本添加至/usr/bin下，可在任何目录下调用yd可执行文件对单词进行翻译。"></a>终端下执行以下程序可以把该shell脚本添加至/usr/bin下，可在任何目录下调用yd可执行文件对单词进行翻译。</h6><a id="more"></a>
+<img src="/blog///2020/05/23/scrip_run/yd_linux_fy.png" class> 
+<p><code>bash linux_fanyi.sh</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment"># </span></span><br><span class="line"><span class="comment"># </span></span><br><span class="line">CMD=/usr/bin/yd</span><br><span class="line"></span><br><span class="line">cat &gt;<span class="variable">$&#123;CMD&#125;</span> &lt;&lt;EOF</span><br><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">ARGS=1</span><br><span class="line">E_BADARGS=1</span><br><span class="line">TEM_FILE=<span class="string">"/tmp/dict.tmp"</span></span><br><span class="line">example_enable=<span class="literal">false</span></span><br><span class="line"><span class="keyword">if</span> [ \<span class="variable">$#</span> -lt <span class="string">"\$ARGS"</span> ]</span><br><span class="line"> <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Usage:\$(basename \$0) word"</span></span><br><span class="line">    <span class="built_in">exit</span> \<span class="variable">$E_BADARGS</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="comment">#处理参数</span></span><br><span class="line"><span class="keyword">while</span> <span class="built_in">getopts</span> <span class="string">"a"</span> arg</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">  <span class="keyword">case</span> \<span class="variable">$arg</span> <span class="keyword">in</span></span><br><span class="line">    a)</span><br><span class="line">      example_enable=<span class="literal">true</span></span><br><span class="line">      <span class="built_in">shift</span></span><br><span class="line">      ;;</span><br><span class="line">    ?)</span><br><span class="line">    example_enable=<span class="literal">false</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"unkown argument"</span></span><br><span class="line">  <span class="built_in">exit</span> 1</span><br><span class="line">  ;;</span><br><span class="line">  <span class="keyword">esac</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line">keyword=<span class="string">"\$*"</span></span><br><span class="line">keyword=\<span class="variable">$&#123;keyword// /%20&#125;</span></span><br><span class="line"><span class="comment"># 抓取页面，删除html代码，空行等，只留下想要的内容</span></span><br><span class="line">curl -s <span class="string">'http://dict.youdao.com/search?q='</span>\<span class="variable">$keyword</span><span class="string">''</span> | awk <span class="string">'BEGIN&#123;j=0;i=0;&#125; &#123;if(/phrsListTab/)&#123;i++;&#125; if(i==1)&#123;print \$0; if(/&lt;\/ul&gt;/)&#123;i=0;&#125;&#125; if(/collinsToggle/)&#123; j++;&#125; if(j==1) &#123;print \$0; if(/&lt;\/ul&gt;/)&#123;j=0;&#125;&#125;&#125;'</span> | sed <span class="string">'s/&lt;[^&gt;]*&gt;//g'</span> | sed <span class="string">'s/&amp;nbsp;//g'</span>| sed <span class="string">'s/&amp;rarr;//g'</span> | sed <span class="string">'s/^\s*//g'</span> | sed <span class="string">'/^$/d'</span>&gt; \<span class="variable">$TEM_FILE</span></span><br><span class="line"><span class="comment"># 处理输出</span></span><br><span class="line">is_head=<span class="literal">true</span> <span class="comment"># 当前行是否属于“头部”</span></span><br><span class="line">head=<span class="string">""</span> <span class="comment"># 头部内容</span></span><br><span class="line">body=<span class="string">""</span> <span class="comment"># 主体内容</span></span><br><span class="line">ln_item=0 <span class="comment"># 每一条解释的行号</span></span><br><span class="line">ln_eg=0 <span class="comment"># 例句行号</span></span><br><span class="line"><span class="keyword">while</span> <span class="built_in">read</span> line</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    <span class="built_in">let</span> ln_item++</span><br><span class="line">    <span class="built_in">let</span> ln_eg++</span><br><span class="line">    num_flag=\$(<span class="built_in">echo</span> <span class="string">"\$line"</span> | awk <span class="string">'/[0-9]+\.\$/'</span>)</span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">"\$num_flag"</span> != <span class="string">""</span> ]; <span class="keyword">then</span> <span class="comment">## 遇见'数字+点'开头的行</span></span><br><span class="line">        is_head=<span class="literal">false</span> <span class="comment"># 第一次遇见数字行  将头部标示设置为false</span></span><br><span class="line">        ln_item=0</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">    eg_flag=\$(<span class="built_in">echo</span> <span class="string">"\$line"</span> | awk <span class="string">'/例：\$/'</span>) <span class="comment"># 遇见'例：'开头的行</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">"\$eg_flag"</span> != <span class="string">""</span> ]; <span class="keyword">then</span></span><br><span class="line">        ln_eg=0</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">    <span class="keyword">if</span> \<span class="variable">$is_head</span> ; <span class="keyword">then</span></span><br><span class="line">        head=<span class="string">"\$head \$line"</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">if</span> [ \<span class="variable">$ln_item</span> == 0 ] ; <span class="keyword">then</span></span><br><span class="line">            line=<span class="string">"\033[32;1m\n\n\$line\033[0m"</span> <span class="comment"># 释义编号</span></span><br><span class="line">        <span class="keyword">elif</span> [ \<span class="variable">$ln_item</span> == 1 ] ; <span class="keyword">then</span></span><br><span class="line">            line=<span class="string">"\033[32;1m[\$line]\033[0m"</span> <span class="comment"># 词性</span></span><br><span class="line">        <span class="keyword">elif</span> [ \<span class="variable">$ln_item</span> == 2 ] ; <span class="keyword">then</span></span><br><span class="line">            line=<span class="string">"\033[1m\$line\033[0m"</span> <span class="comment"># 释义 </span></span><br><span class="line">        <span class="keyword">elif</span> [ \<span class="variable">$ln_eg</span> == 0 ] ; <span class="keyword">then</span></span><br><span class="line">            line=<span class="string">"\033[32;1m\n   \$line\033[0m"</span> <span class="comment"># 例：</span></span><br><span class="line">        <span class="keyword">elif</span> [ \<span class="variable">$ln_eg</span> == 1 ]; <span class="keyword">then</span></span><br><span class="line">            line=<span class="string">"\033[33m\$line\033[0m"</span> <span class="comment"># 例句 </span></span><br><span class="line">        <span class="keyword">elif</span> [ \<span class="variable">$ln_eg</span> == 2 ]; <span class="keyword">then</span></span><br><span class="line">            line=<span class="string">"\033[33m\$line\033[0m"</span> <span class="comment"># 例句释义 </span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">        body=<span class="string">"\$body \$line"</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span> &lt; \<span class="variable">$TEM_FILE</span></span><br><span class="line"><span class="keyword">if</span> \<span class="variable">$example_enable</span></span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> -e <span class="string">"\033[31;1m\$head\033[0m \$body"</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="built_in">echo</span> -e <span class="string">"\033[31;1m\$head"</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"\033[33m &lt;http://dict.youdao.com&gt;\033[0m"</span></span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">chmod +x <span class="variable">$&#123;CMD&#125;</span></span><br></pre></td></tr></table></figure>
+<h6 id="源自redhatxl大佬的github的shell脚本-参考链接"><a href="#源自redhatxl大佬的github的shell脚本-参考链接" class="headerlink" title="源自redhatxl大佬的github的shell脚本(参考链接)"></a>源自redhatxl大佬的github的shell脚本(<a href="https://github.com/daily-scripts/shell-scripts.git" target="_blank" rel="noopener">参考链接</a>)</h6><h6 id="redhatxl大佬的daily-scripts下有较多可以学习的shell脚本"><a href="#redhatxl大佬的daily-scripts下有较多可以学习的shell脚本" class="headerlink" title="redhatxl大佬的daily-scripts下有较多可以学习的shell脚本"></a>redhatxl大佬的daily-scripts下有较多可以学习的shell脚本</h6><hr>
+<h5 id="personal-ideal"><a href="#personal-ideal" class="headerlink" title="personal ideal"></a>personal ideal</h5><h6 id="改写的login-sh登录学校新堡垒大型机的脚本文件重命名为login，放置于-usr-bin-下可以随时login-六位数OTP登录学校新大型机。"><a href="#改写的login-sh登录学校新堡垒大型机的脚本文件重命名为login，放置于-usr-bin-下可以随时login-六位数OTP登录学校新大型机。" class="headerlink" title="改写的login.sh登录学校新堡垒大型机的脚本文件重命名为login，放置于/usr/bin/下可以随时login+六位数OTP登录学校新大型机。"></a>改写的login.sh登录学校新堡垒大型机的脚本文件重命名为login，放置于/usr/bin/下可以随时login+六位数OTP登录学校新大型机。</h6><img src="/blog///2020/05/23/scrip_run/linux_login.png" class>
+<h6 id="改写的nuist-py需要在开头加上-bin-python-并将nuist重命名为nuist，防止于-usr-bin下可随时nuist链接校内以太网。"><a href="#改写的nuist-py需要在开头加上-bin-python-并将nuist重命名为nuist，防止于-usr-bin下可随时nuist链接校内以太网。" class="headerlink" title="改写的nuist.py需要在开头加上#!/bin/python 并将nuist重命名为nuist，防止于/usr/bin下可随时nuist链接校内以太网。"></a>改写的nuist.py需要在开头加上#!/bin/python 并将nuist重命名为nuist，防止于/usr/bin下可随时nuist链接校内以太网。</h6><img src="/blog///2020/05/23/scrip_run/linux_nuist.png" class title="nuist"> 
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chidiangongzi.github.io/blog/2020/05/23/scrip_run/" data-id="cl4nswnod00104kcz1jjsa13l" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/shell/" rel="tag">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/blog/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2020/05/27/python-ncl/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          python_ncl
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2020/04/15/dwm%E7%AA%97%E5%8F%A3%E7%AE%A1%E7%90%86%E5%99%A8%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%AB%E6%8D%B7%E9%94%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">窗口管理器dwm使用过程中的一些快捷键</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#更新"><span class="toc-number">1.</span> <span class="toc-text">更新</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#终端下执行以下程序可以把该shell脚本添加至-usr-bin下，可在任何目录下调用yd可执行文件对单词进行翻译。"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">终端下执行以下程序可以把该shell脚本添加至&#x2F;usr&#x2F;bin下，可在任何目录下调用yd可执行文件对单词进行翻译。</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#源自redhatxl大佬的github的shell脚本-参考链接"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">源自redhatxl大佬的github的shell脚本(参考链接)</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#redhatxl大佬的daily-scripts下有较多可以学习的shell脚本"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">redhatxl大佬的daily-scripts下有较多可以学习的shell脚本</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#personal-ideal"><span class="toc-number">1.0.1.</span> <span class="toc-text">personal ideal</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#改写的login-sh登录学校新堡垒大型机的脚本文件重命名为login，放置于-usr-bin-下可以随时login-六位数OTP登录学校新大型机。"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">改写的login.sh登录学校新堡垒大型机的脚本文件重命名为login，放置于&#x2F;usr&#x2F;bin&#x2F;下可以随时login+六位数OTP登录学校新大型机。</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#改写的nuist-py需要在开头加上-bin-python-并将nuist重命名为nuist，防止于-usr-bin下可随时nuist链接校内以太网。"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">改写的nuist.py需要在开头加上#!&#x2F;bin&#x2F;python 并将nuist重命名为nuist，防止于&#x2F;usr&#x2F;bin下可随时nuist链接校内以太网。</span></a></li></ol></li></ol></li></ol></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2022 pro^w^&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;2602005529@qq.com
+    </div>
+  </div>
+</footer>
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">首页</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/blog/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842688ce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ 
+<script src="/blog/js/is.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+<script src="/blog/js/elevator.js"></script>
+
+  </div>
+</body>
+</html>

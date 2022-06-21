@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>UCLALES-SALSA MODEL安装 | 是睿睿吖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="当前所在路径：&#x2F;storage&#x2F;mkr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UCLALES-SALSA MODEL安装">
+<meta property="og:url" content="http://chidiangongzi.github.io/blog/2022/04/06/UCLALES-SALSA/index.html">
+<meta property="og:site_name" content="是睿睿吖">
+<meta property="og:description" content="当前所在路径：&#x2F;storage&#x2F;mkr">
+<meta property="og:locale" content="ch">
+<meta property="article:published_time" content="2022-04-06T02:50:17.000Z">
+<meta property="article:modified_time" content="2022-05-18T02:59:03.155Z">
+<meta property="article:author" content="pro^w^">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="是睿睿吖" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://chidiangongzi.github.io/blog"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">首页</a>
+        
+          <a class="main-nav-link" href="/blog/archives">归档</a>
+        
+          <a class="main-nav-link" href="/blog/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">是睿睿吖</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-UCLALES-SALSA" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2022/04/06/UCLALES-SALSA/" class="article-date">
+  <time datetime="2022-04-06T02:50:17.000Z" itemprop="datePublished">2022-04-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      UCLALES-SALSA MODEL安装
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>当前所在路径：<code>/storage/mkr</code></p>
+<a id="more"></a>
+<p>安装操作(make时间很久)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir LY-MODEL &amp;&amp; <span class="built_in">cd</span> LY-MODEL</span><br><span class="line">https://www.mpich.org/static/downloads/4.0.1/mpich-4.0.1.tar.gz</span><br><span class="line">tar -xvzf mpich-4.0.1.tar.gz</span><br></pre></td></tr></table></figure></p>
+<h3 id="安装GUN编译器（9-3-0）"><a href="#安装GUN编译器（9-3-0）" class="headerlink" title="安装GUN编译器（9.3.0）"></a>安装GUN编译器（9.3.0）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">wget http://mirrors.ustc.edu.cn/gnu/gcc/gcc-9.3.0/gcc-9.3.0.tar.gz</span><br><span class="line">tar zxvf gcc-9.3.0.tar.gz</span><br><span class="line"><span class="built_in">cd</span> gcc-9.3.0</span><br><span class="line">sh ./contrib/download_prerequisites</span><br><span class="line">mkdir build &amp;&amp; <span class="built_in">cd</span> build</span><br><span class="line"><span class="built_in">unset</span> LIBRARY_PATH</span><br><span class="line">../configure --prefix=/storage/mkr/LY-MODEL/gcc483 --<span class="built_in">disable</span>-bootstrap --<span class="built_in">enable</span>-languages=c,c++,fortran --<span class="built_in">disable</span>-multilib</span><br><span class="line">make -j</span><br><span class="line">make install</span><br><span class="line">vim ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> GCC_HOME=/storage/mkr/LY-MODEL/gcc10</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$GCC_HOME</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> CPATH=<span class="variable">$GCC_HOME</span>/include:<span class="variable">$CPANT</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$GCC_HOME</span>/lib:<span class="variable">$GCC_HOME</span>/lib64:<span class="variable">$LD_LIBARAY_PATH</span></span><br><span class="line"><span class="built_in">export</span> LIBRARY_PATH=<span class="variable">$GCC_HOME</span>/lib:<span class="variable">$GCC_HOME</span>/lib64:<span class="variable">$LIBRARY_PATH</span></span><br></pre></td></tr></table></figure>
+<h3 id="安装-mpich"><a href="#安装-mpich" class="headerlink" title="安装 mpich"></a>安装 mpich</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> mpich-4.0.1</span><br><span class="line">./configure --prefix=/storage/mkr/LY-MODEL/mpich4</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<h3 id="安装-szip"><a href="#安装-szip" class="headerlink" title="安装 szip"></a>安装 szip</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">wget https://support.hdfgroup.org/ftp/lib-external/szip/2.1.1/src/szip-2.1.1.tar.gz</span><br><span class="line">tar zxvf szip-2.1.1.tar.gz</span><br><span class="line"><span class="built_in">cd</span> szip-2.1.1</span><br><span class="line">mkdir build &amp;&amp; <span class="built_in">cd</span> build</span><br><span class="line">../configure --prefix=/storage/mkr/LY-MODEL/szip</span><br><span class="line">make -j</span><br><span class="line">make install</span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=/storage/mkr/LY-MODEL/szip/lib:<span class="variable">$LD_LIBRARY_PATH</span></span><br></pre></td></tr></table></figure>
+<h3 id="安装OpenMPI"><a href="#安装OpenMPI" class="headerlink" title="安装OpenMPI"></a>安装OpenMPI</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">yum install -y hwloc-libs libevent-devel</span><br><span class="line">wget https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.0.tar.bz2</span><br><span class="line">tar jxvf openmpi-4.1.0.tar.bz2</span><br><span class="line"><span class="built_in">cd</span> openmpi-4.1.0/</span><br><span class="line">mkdir build &amp;&amp; <span class="built_in">cd</span> build</span><br><span class="line">../configure --prefix=/storage/mkr/LY-MODEL/openmpi --<span class="built_in">enable</span>-shared</span><br><span class="line">make -j</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<h3 id="安装-HDF5"><a href="#安装-HDF5" class="headerlink" title="安装 HDF5"></a>安装 HDF5</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf hdf5-1.10.7.tar.gz</span><br><span class="line"><span class="built_in">cd</span> hdf5-1.10.7</span><br><span class="line">mkdir build &amp;&amp; <span class="built_in">cd</span> build</span><br><span class="line">CC=mpicc FC=mpifort F77=mpifort \</span><br><span class="line"> ../configure --prefix=/storage/mkr/LY-MODEL/hdf5 --<span class="built_in">enable</span>-fortran --<span class="built_in">enable</span>-parallel --<span class="built_in">enable</span>-shared \</span><br><span class="line">    --<span class="built_in">enable</span>-hl --with-szlib=/storage/mkr/LY-MODEL/szip</span><br><span class="line">make -j</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<h3 id="安装-PNETCDF"><a href="#安装-PNETCDF" class="headerlink" title="安装 PNETCDF"></a>安装 PNETCDF</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">wget https://parallel-netcdf.github.io/Release/pnetcdf-1.12.2.tar.gz</span><br><span class="line">tar zxvf pnetcdf-1.12.2.tar.gz</span><br><span class="line"><span class="built_in">cd</span> pnetcdf-1.12.2</span><br><span class="line">mkdir build &amp;&amp; <span class="built_in">cd</span> build</span><br><span class="line">CFLAGS=<span class="string">"-fPIC -DPIC"</span> CXXFLAGS=<span class="string">"-fPIC -DPIC"</span> FCFLAGS=<span class="string">"-fPIC"</span> FFLAGS=<span class="string">"-fPIC"</span> \</span><br><span class="line">    CC=mpicc CXX=mpicxx FC=mpifort F77=mpifort \</span><br><span class="line">    ../configure --prefix=/storage/mkr/LY-MODEL/pnetcdf --<span class="built_in">enable</span>-shared --<span class="built_in">enable</span>-fortran --<span class="built_in">enable</span>-large-file-test</span><br><span class="line">make -j</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<h3 id="安装-netcdf-c"><a href="#安装-netcdf-c" class="headerlink" title="安装 netcdf-c"></a>安装 netcdf-c</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/Unidata/netcdf-c/archive/refs/tags/v4.7.4.tar.gz -O netcdf-c-4.7.4.tar.gz</span><br><span class="line">tar zxvf netcdf-c-4.7.4.tar.gz</span><br><span class="line"><span class="built_in">cd</span> netcdf-c-4.7.4</span><br><span class="line">mkdir build &amp;&amp; <span class="built_in">cd</span> build</span><br><span class="line"> CFLAGS=<span class="string">"-I/storage/mkr/LY-MODEL/hdf5/include -I/storage/mkr/LY-MODEL/pnetcdf/include"</span> \</span><br><span class="line">   CPPFLAGS=<span class="string">"-I/storage/mkr/LY-MODEL/hdf5/include -I/storage/mkr/LY-MODEL/pnetcdf/include"</span> \</span><br><span class="line">   LDFLAGS=<span class="string">"-L/storage/mkr/LY-MODEL/hdf5/lib -L/storage/mkr/LY-MODEL/pnetcdf/lib"</span> \</span><br><span class="line">   CC=mpicc ../configure --prefix=/storage/mkr/LY-MODEL/netcdf \</span><br><span class="line">   --<span class="built_in">enable</span>-shared --<span class="built_in">enable</span>-static --<span class="built_in">enable</span>-pnetcdf --<span class="built_in">enable</span>-netcdf-4 \</span><br><span class="line">   --<span class="built_in">enable</span>-largefile --<span class="built_in">enable</span>-large-file-tests</span><br><span class="line">make -j</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<h3 id="安装-netcdf-f"><a href="#安装-netcdf-f" class="headerlink" title="安装 netcdf-f"></a>安装 netcdf-f</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-fortran-4.5.3.tar.gz</span><br><span class="line">tar zxvf netcdf-fortran-4.5.3.tar.gz</span><br><span class="line"><span class="built_in">cd</span> netcdf-fortran-4.5.3</span><br><span class="line">mkdir build &amp;&amp; <span class="built_in">cd</span> build</span><br><span class="line"><span class="built_in">export</span> NETCDF=/storage/mkr/LY-MODEL/netcdf</span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$NETCDF</span>/lib:<span class="variable">$LD_LIBRARY_PATH</span></span><br><span class="line">CFLAGS=<span class="string">"-I<span class="variable">$HDF5</span>/include -I<span class="variable">$NETCDF</span>/include"</span> \</span><br><span class="line">    FCFLAGS=<span class="string">"-I<span class="variable">$HDF5</span>/include -I<span class="variable">$NETCDF</span>/include"</span> \</span><br><span class="line">    FFFLAGS=<span class="string">"-I<span class="variable">$HDF5</span>/include -I<span class="variable">$NETCDF</span>/include"</span> \</span><br><span class="line">    CPPFLAGS=<span class="string">"-I<span class="variable">$HDF5</span>/include -I<span class="variable">$NETCDF</span>/include"</span> \</span><br><span class="line">    LDFLAGS=<span class="string">"-L<span class="variable">$HDF5</span>/lib -L<span class="variable">$NETCDF</span>/lib"</span> \</span><br><span class="line">    CC=mpicc FC=mpifort F77=mpifort \</span><br><span class="line">    ../configure --prefix=/storage/mkr/LY-MODEL/netcdf \</span><br><span class="line">    --<span class="built_in">enable</span>-shared --<span class="built_in">enable</span>-static --<span class="built_in">enable</span>-large-file-tests --<span class="built_in">enable</span>-largefile</span><br><span class="line">make -j</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chidiangongzi.github.io/blog/2022/04/06/UCLALES-SALSA/" data-id="cl4nswnm700014kcz78oy8jsk" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/linux/" rel="tag">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/blog/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2022/06/21/%E6%AF%95%E4%B8%9A%E8%84%9A%E6%9C%AC%E6%95%B4%E7%90%86/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          毕业脚本整理
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2021/03/13/wrf-interp/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">wrf_interp</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装GUN编译器（9-3-0）"><span class="toc-number">1.</span> <span class="toc-text">安装GUN编译器（9.3.0）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-mpich"><span class="toc-number">2.</span> <span class="toc-text">安装 mpich</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-szip"><span class="toc-number">3.</span> <span class="toc-text">安装 szip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装OpenMPI"><span class="toc-number">4.</span> <span class="toc-text">安装OpenMPI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-HDF5"><span class="toc-number">5.</span> <span class="toc-text">安装 HDF5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-PNETCDF"><span class="toc-number">6.</span> <span class="toc-text">安装 PNETCDF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-netcdf-c"><span class="toc-number">7.</span> <span class="toc-text">安装 netcdf-c</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-netcdf-f"><span class="toc-number">8.</span> <span class="toc-text">安装 netcdf-f</span></a></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2022 pro^w^&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;2602005529@qq.com
+    </div>
+  </div>
+</footer>
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">首页</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/blog/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842688ce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ 
+<script src="/blog/js/is.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+<script src="/blog/js/elevator.js"></script>
+
+  </div>
+</body>
+</html>

